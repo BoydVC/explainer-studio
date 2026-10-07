@@ -1,0 +1,155 @@
+{
+  "id": "ravens-lamar-line-swing",
+  "title": "Lamar's ankle and the 9-point line swing",
+  "kicker": "Ravens · Oct 6, 2026",
+  "subtitle": "How one MRI flipped Sunday night at Atlanta, in five quick beats.",
+  "title_narration": "Lamar's ankle, and the nine-point line swing.",
+  "theme": "ravens",
+  "seed": 41,
+  "length_scale": 0.95,
+  "end_seconds": 6.5,
+  "source_files": [
+    "/workspace/ij_2026-10-06_research.md"
+  ],
+  "as_of": "Grounded in Jim's Interest Journal research for Tue Oct 6, 2026. Lines and injury status change fast; check before Sunday.",
+  "scenes": [
+    {
+      "type": "kinetic",
+      "label": "The MRI",
+      "heading": "Left ankle sprain for *Lamar Jackson*",
+      "data": {
+        "lines": [
+          "Only an *\"outside chance\"* to play Sunday night at Atlanta.",
+          "Not considered long-term. *Shouldn't need surgery.*"
+        ],
+        "size": 60
+      },
+      "caption": "Lamar Jackson's MRI shows a left ankle sprain, and he has only an outside chance to play Sunday night at Atlanta. The injury isn't considered long-term and shouldn't need surgery.",
+      "evidence": [
+        "Lamar's MRI shows a left ankle sprain, and he has only an \"outside chance\" to play Sunday.",
+        "the injury isn't considered long-term and shouldn't need surgery",
+        "Ravens (3-1): at Atlanta, Sunday night Oct 11"
+      ]
+    },
+    {
+      "type": "line",
+      "label": "The line at DraftKings",
+      "heading": "From favorite to underdog",
+      "data": {
+        "invert": true,
+        "zero_label": "EVEN",
+        "note": "A 9-POINT SWING",
+        "points": [
+          {
+            "label": "Lookahead",
+            "value": -6,
+            "display": "BAL -6"
+          },
+          {
+            "label": "Sunday night",
+            "value": -3.5,
+            "display": "BAL -3.5"
+          },
+          {
+            "label": "After the injury news",
+            "value": 3,
+            "display": "BAL +3",
+            "highlight": true
+          }
+        ]
+      },
+      "caption": "At DraftKings, the line went from Ravens minus 6 on the lookahead, to minus 3.5 on Sunday night, to Baltimore plus 3. That's a 9-point swing.",
+      "evidence": [
+        "At DraftKings it went from -6 (lookahead) to -3.5 (Sunday night) to Baltimore +3, a 9-point swing."
+      ],
+      "narration": "At DraftKings, the line went from Ravens minus 6 on the lookahead, to minus 3.5 on Sunday night, to Baltimore plus 3. That's a 9-point swing."
+    },
+    {
+      "type": "cards",
+      "label": "The context",
+      "heading": "What the numbers say",
+      "data": {
+        "cards": [
+          {
+            "big": "46.5 → 43.5",
+            "label": "the game total dropped"
+          },
+          {
+            "big": "6-11",
+            "label": "Ravens without Lamar since 2019",
+            "alt": true
+          }
+        ]
+      },
+      "caption": "The total dropped from 46.5 to 43.5. And the Ravens are 6-11 without Lamar since 2019.",
+      "evidence": [
+        "The total dropped from 46.5 to 43.5.",
+        "The Ravens are 6-11 without Lamar since 2019."
+      ],
+      "narration": "The total dropped from 46.5 to 43.5. And the Ravens are 6 and 11 without Lamar since 2019."
+    },
+    {
+      "type": "kinetic",
+      "label": "Next man up",
+      "heading": "Tyler Huntley takes the first-team reps",
+      "data": {
+        "lines": [
+          "Huntley gets *first-team practice reps.*",
+          "First injury report: *Wednesday or Thursday.*"
+        ],
+        "size": 62
+      },
+      "caption": "Tyler Huntley gets first-team practice reps, and the first injury report comes Wednesday or Thursday.",
+      "evidence": [
+        "Tyler Huntley gets first-team practice reps. The first injury report comes Wednesday or Thursday."
+      ]
+    },
+    {
+      "type": "cards",
+      "label": "More bad news",
+      "heading": "The rest of the injury list",
+      "data": {
+        "cards": [
+          {
+            "big": "Out for season",
+            "label": "TE Durham Smythe, torn Achilles",
+            "alt": true
+          },
+          {
+            "big": "Andrews",
+            "label": "now leads the tight end room"
+          },
+          {
+            "big": "No update",
+            "label": "Humphrey (calf) and Vorhees (foot)"
+          }
+        ]
+      },
+      "caption": "Tight end Durham Smythe has a torn Achilles and is out for the season, so Mark Andrews leads the TE room. There's no status update yet on Humphrey or Vorhees.",
+      "evidence": [
+        "Durham Smythe (TE) has a torn Achilles and is out for the season.",
+        "Mark Andrews leads the TE room",
+        "Humphrey (calf) and Vorhees (foot):** No status update."
+      ]
+    }
+  ],
+  "sources": [
+    {
+      "label": "ESPN: Lamar Jackson dealing with ankle sprain",
+      "url": "https://www.espn.com/nfl/story/_/id/50116449/sources-ravens-qb-lamar-jackson-dealing-ankle-sprain"
+    },
+    {
+      "label": "CBS Sports: Lamar Jackson injury update",
+      "url": "https://www.cbssports.com/nfl/news/lamar-jackson-injury-update-ravens-qb-dealing-with-ankle-sprain/"
+    },
+    {
+      "label": "Covers: Ravens-Falcons line swings 9 points",
+      "url": "https://www.covers.com/industry/ravens-falcons-line-swings-9-points-amid-lamar-injury-doubts-oct-6-2026"
+    },
+    {
+      "label": "Ravens.com: Durham Smythe out for season",
+      "url": "https://www.baltimoreravens.com/news/durham-smythe-torn-achilles-ravens-tight-end-out-for-season"
+    }
+  ],
+  "music": "pad"
+}

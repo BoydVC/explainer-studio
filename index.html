@@ -1,0 +1,542 @@
+<!doctype html>
+<html lang="en"><head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Explainer Studio · Jim's Interest Journal</title>
+<style>
+  :root {
+    --bg:#03050c; --card:#0a0f1c; --card2:#0e1528; --line:#1a2340; --line2:#243056;
+    --text:#f1f5ff; --muted:#8b9bb8; --accent:#5ce1ff; --accent2:#ff9a4a;
+    --ravens:#f59e0b; --spacex:#5ce1ff; --agents:#a78bfa; --tesla:#34d399;
+  }
+  * { box-sizing:border-box; }
+  html { scroll-behavior:smooth; }
+  body {
+    margin:0; color:var(--text);
+    font:16px/1.5 Inter, system-ui, sans-serif;
+    background:
+      radial-gradient(1100px 520px at 88% -8%, #1a3a7a55, transparent 60%),
+      radial-gradient(800px 480px at -10% 30%, #7c2d1222, transparent 55%),
+      radial-gradient(700px 400px at 50% 110%, #3b2a6e33, transparent 50%),
+      var(--bg);
+    min-height:100vh;
+  }
+  body::before {
+    content:""; position:fixed; inset:0; pointer-events:none; opacity:.35;
+    background-image:url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='0.45'/%3E%3C/svg%3E");
+    mix-blend-mode:overlay; z-index:0;
+  }
+  .shell { position:relative; z-index:1; }
+  header { padding:52px 6vw 12px; }
+  header .k { font:600 12px JetBrains Mono, monospace; letter-spacing:.16em; color:var(--accent); text-transform:uppercase; }
+  header h1 {
+    font:800 clamp(32px, 5vw, 52px)/1.05 Unbounded, Inter, sans-serif;
+    margin:14px 0 10px; letter-spacing:-.02em;
+    background:linear-gradient(120deg, #fff 20%, #9ad8ff 60%, #ffb07a 100%);
+    -webkit-background-clip:text; background-clip:text; color:transparent;
+  }
+  header p { color:var(--muted); max-width:820px; margin:0; font-size:16px; }
+  .stats { display:flex; flex-wrap:wrap; gap:10px; margin-top:18px; }
+  .stats span {
+    font:600 12px JetBrains Mono, monospace; letter-spacing:.04em;
+    padding:6px 12px; border-radius:999px; border:1px solid var(--line2);
+    background:#ffffff08; color:var(--muted);
+  }
+  .latest { padding:8px 6vw 8px; }
+  .latest h2 {
+    font:700 12px JetBrains Mono, monospace; letter-spacing:.14em; text-transform:uppercase;
+    color:var(--accent2); margin:0 0 12px;
+  }
+  .latest-row { display:grid; grid-template-columns:repeat(auto-fit, minmax(260px, 1fr)); gap:16px; }
+  .latest-card {
+    display:flex; gap:14px; align-items:stretch; text-decoration:none; color:inherit;
+    background:linear-gradient(145deg, #121a30, #0a1020); border:1px solid var(--line2);
+    border-radius:16px; overflow:hidden; transition:transform .2s, border-color .2s, box-shadow .2s;
+  }
+  .latest-card:hover { transform:translateY(-3px); border-color:var(--accent); box-shadow:0 16px 40px #0008; }
+  .lc-art { width:120px; min-height:88px; background:#000; flex-shrink:0; }
+  .lc-art img { width:100%; height:100%; object-fit:cover; display:block; }
+  .lc-body { padding:14px 14px 14px 0; }
+  .lc-k { font:600 11px JetBrains Mono, monospace; color:var(--accent); letter-spacing:.08em; }
+  .lc-t { font:700 15px/1.3 Inter, sans-serif; margin-top:4px; }
+  .filters {
+    display:flex; flex-wrap:wrap; gap:8px; padding:18px 6vw 8px; position:sticky; top:0; z-index:5;
+    background:linear-gradient(180deg, #03050cee, #03050c99 70%, transparent); backdrop-filter:blur(10px);
+  }
+  .fbtn {
+    border:1px solid var(--line); background:#0b1224; color:var(--muted); cursor:pointer;
+    border-radius:999px; padding:8px 14px; font:600 13px Inter, sans-serif; transition:.15s;
+  }
+  .fbtn:hover { color:var(--text); border-color:var(--line2); }
+  .fbtn.active { background:var(--accent); color:#031018; border-color:var(--accent); }
+  main {
+    display:grid; grid-template-columns:repeat(auto-fill, minmax(min(420px, 100%), 1fr));
+    gap:26px; padding:12px 6vw 72px;
+  }
+  .card {
+    background:linear-gradient(180deg, var(--card2), var(--card));
+    border:1px solid var(--line); border-radius:22px; overflow:hidden;
+    display:flex; flex-direction:column;
+    box-shadow:0 20px 50px #0006;
+    transition:transform .2s, border-color .2s, box-shadow .2s;
+  }
+  .card:hover { transform:translateY(-4px); border-color:#3a4d7a; box-shadow:0 28px 60px #000a; }
+  .card.hidden { display:none; }
+  .poster { position:relative; display:block; aspect-ratio:16/9; background:#000; overflow:hidden; text-decoration:none; }
+  .poster img, .poster video { width:100%; height:100%; object-fit:cover; display:block; }
+  .poster.ph, .ph { background:radial-gradient(circle at 70% 30%, #1b3a7a66, #050814); min-height:180px; }
+  .play-fab {
+    position:absolute; left:50%; top:50%; transform:translate(-50%,-50%);
+    background:linear-gradient(135deg, var(--accent), #7dd3fc); color:#031018;
+    font:800 14px Inter, sans-serif; padding:12px 18px; border-radius:999px;
+    box-shadow:0 10px 30px #000a; opacity:.95; pointer-events:none;
+  }
+  .badge-kin {
+    position:absolute; top:12px; right:12px; font:700 11px JetBrains Mono, monospace;
+    letter-spacing:.08em; text-transform:uppercase; padding:5px 10px; border-radius:999px;
+    background:#000a; color:var(--accent); border:1px solid #5ce1ff55;
+  }
+  .meta { padding:16px 20px 20px; flex:1; display:flex; flex-direction:column; }
+  .kicker-row { display:flex; flex-wrap:wrap; gap:8px; align-items:center; margin-bottom:4px; }
+  .kicker { font:600 11px JetBrains Mono, monospace; letter-spacing:.1em; color:var(--accent); text-transform:uppercase; }
+  .new {
+    font:800 10px JetBrains Mono, monospace; letter-spacing:.1em;
+    background:linear-gradient(90deg, var(--accent2), #ff5d7a); color:#1a0a00;
+    padding:3px 8px; border-radius:6px;
+  }
+  .topic-pill {
+    margin-left:auto; font:600 11px Inter, sans-serif; padding:3px 9px; border-radius:999px;
+    background:#ffffff10; color:var(--muted); border:1px solid var(--line);
+  }
+  .topic-pill[data-t=ravens] { color:var(--ravens); border-color:#f59e0b44; }
+  .topic-pill[data-t=spacex] { color:var(--spacex); border-color:#5ce1ff44; }
+  .topic-pill[data-t=agents] { color:var(--agents); border-color:#a78bfa44; }
+  .topic-pill[data-t=tesla] { color:var(--tesla); border-color:#34d39944; }
+  h2 { margin:4px 0 6px; font-size:20px; line-height:1.25; letter-spacing:-.01em; }
+  .sub { color:var(--muted); margin:0 0 12px; font-size:14px; flex:0; }
+  .pills { margin-bottom:4px; }
+  .pills span {
+    display:inline-block; font-size:11px; padding:3px 9px; margin:0 6px 6px 0;
+    border-radius:99px; background:#ffffff0d; color:var(--muted); border:1px solid #ffffff08;
+  }
+  .pills .ok { background:#10b98122; color:#6ee7b7; border-color:#10b98133; }
+  .pills .bad { background:#ef444422; color:#fca5a5; border-color:#ef444433; }
+  .pills .src-badge { color:var(--accent2); }
+  details { margin:6px 0; color:var(--muted); font-size:13px; }
+  summary { cursor:pointer; color:var(--text); }
+  details a { color:var(--accent); }
+  .links { margin-top:auto; padding-top:8px; }
+  .links a {
+    display:inline-block; margin:8px 14px 0 0; color:var(--accent2);
+    text-decoration:none; font-size:13px; font-weight:600;
+  }
+  .links a:hover { text-decoration:underline; }
+  footer { color:var(--muted); padding:0 6vw 56px; font-size:13px; max-width:900px; }
+  code { background:#ffffff12; padding:2px 6px; border-radius:6px; font-size:12px; }
+  .empty { grid-column:1/-1; color:var(--muted); padding:40px; text-align:center; }
+</style>
+</head><body>
+<div class="shell">
+<header>
+  <div class="k">TokenMax · Explainer Studio · Sat Oct 10 remaster</div>
+  <h1>Jim's Interest Journal, explained</h1>
+  <p>12 explainers (11.1 min on the clock) — curated storyboards grounded in Jim's journal,
+  playable as kinetic canvas pages (and MP4s when rendered). Filter by topic, hit Latest for today's ships,
+  or open a card and press Play. Works offline from <code>file://</code>.</p>
+  <div class="stats">
+    <span>12 titles</span>
+    <span>5 new today</span>
+    <span>12 kinetic</span>
+    <span>5 MP4</span>
+    <span>topics: SpaceX · Ravens · Agents · Tesla</span>
+  </div>
+</header>
+
+<section class="latest">
+  <h2>Latest strip</h2>
+  <div class="latest-row">
+      <a class="latest-card" href="explainers/grok-bot-model-agnostic-oct-7.html" data-topic="agents">
+        <div class="lc-art"><img src='explainers/posters/grok-bot-model-agnostic-oct-7.svg' alt=''></div>
+        <div class="lc-body">
+          <div class="lc-k">Agents / xAI · NEW</div>
+          <div class="lc-t">Grok Bot goes model-agnostic</div>
+        </div>
+      </a>
+      <a class="latest-card" href="explainers/harvey-lexis-mtd-oct-7.html" data-topic="agents">
+        <div class="lc-art"><img src='explainers/posters/harvey-lexis-mtd-oct-7.svg' alt=''></div>
+        <div class="lc-body">
+          <div class="lc-k">Agents / xAI · NEW</div>
+          <div class="lc-t">Harvey + LexisNexis: Motion to Dismiss agent</div>
+        </div>
+      </a>
+      <a class="latest-card" href="explainers/starlink-leo-risk-oct-6.html" data-topic="spacex">
+        <div class="lc-art"><img src='explainers/posters/starlink-leo-risk-oct-6.svg' alt=''></div>
+        <div class="lc-body">
+          <div class="lc-k">SpaceX / Starlink · NEW</div>
+          <div class="lc-t">Starlink: undisclosed maneuvers are the biggest LEO risk</div>
+        </div>
+      </a>
+      <a class="latest-card" href="explainers/ravens-jurgens-trade-oct-7.html" data-topic="ravens">
+        <div class="lc-art"><img src='explainers/posters/ravens-jurgens-trade-oct-7.svg' alt=''></div>
+        <div class="lc-body">
+          <div class="lc-k">Ravens · NEW</div>
+          <div class="lc-t">Ravens land Cam Jurgens: the biggest trade since Roquan</div>
+        </div>
+      </a></div>
+</section>
+
+<nav class="filters" id="filters"><button class="fbtn active" data-filter="all">All</button><button class="fbtn" data-filter="newest">Latest</button><button class="fbtn" data-filter="spacex">SpaceX / Starlink</button><button class="fbtn" data-filter="ravens">Ravens</button><button class="fbtn" data-filter="agents">Agents / xAI</button><button class="fbtn" data-filter="tesla">Tesla</button></nav>
+
+<main id="grid">
+  <article class="card" data-topic="agents" data-id="grok-bot-model-agnostic-oct-7" data-newest="1">
+    
+    <div class="poster">
+      <video controls preload="none" poster="out/thumbs/grok-bot-model-agnostic-oct-7.jpg">
+        <source src="out/grok-bot-model-agnostic-oct-7.mp4" type="video/mp4">
+        <track kind="captions" src="out/grok-bot-model-agnostic-oct-7.vtt" srclang="en" label="English">
+      </video>
+      <a class="play-fab" href="out/grok-bot-model-agnostic-oct-7.mp4">▶</a>
+    </div>
+    <div class="meta">
+      <div class="kicker-row">
+        <div class="kicker">xAI / Grok Bot · Oct 7, 2026</div>
+        <span class="new">LATEST</span>
+        <span class="topic-pill" data-t="agents">Agents / xAI</span>
+      </div>
+      <h2>Grok Bot goes model-agnostic</h2>
+      <p class="sub">Musk: SpaceX bots will use the best backend — Claude, MidJourney, Suno — plus a lightning-fast Grok 4.8 path.</p>
+      <div class="pills">
+        <span>66s</span>
+        <span>NEW · MP4</span>
+        <span class="ok">grounding PASS · 51# · 8q · 4u</span>
+        <span class="src-badge">4 sources</span>
+      </div>
+      <details><summary>Scenes</summary><ol><li><b>quote</b> Wed 2:46am ET</li><li><b>cards</b> What he listed</li><li><b>kinetic</b> Small models + Grok 4.8</li><li><b>timeline</b> Past v0.66.0</li><li><b>kinetic</b> What shipped October 7</li></ol></details>
+      <details><summary>Sources (4)</summary><ul><li><a href="https://x.com/elonmusk/status/2107724314451878104" target="_blank" rel="noopener">Elon Musk post (X)</a></li><li><a href="https://www.cityam.com/musk-turns-to-rival-anthropic-to-power-grok/" target="_blank" rel="noopener">City AM: Musk turns to rival Anthropic to power Grok</a></li><li><a href="https://thenextweb.com/news/grok-bot-claude-opus-midjourney-suno-musk" target="_blank" rel="noopener">TNW: Grok Bot Claude Opus MidJourney Suno</a></li><li><a href="https://x.ai/bot/changelog" target="_blank" rel="noopener">xAI Grok Bot changelog</a></li></ul></details>
+      <div class="links"><a href="explainers/grok-bot-model-agnostic-oct-7.html">Open kinetic</a><a href="out/grok-bot-model-agnostic-oct-7.mp4" download>Download MP4</a><a href="screenshots/grok-bot-model-agnostic-oct-7_contact.png" target="_blank">Contact sheet</a><a href="out/grok-bot-model-agnostic-oct-7.storyboard.json" target="_blank">Storyboard</a><a href="out/grok-bot-model-agnostic-oct-7.grounding.json" target="_blank">Grounding</a><a href="out/grok-bot-model-agnostic-oct-7.srt" target="_blank">Captions</a></div>
+    </div>
+  </article>
+  <article class="card" data-topic="agents" data-id="harvey-lexis-mtd-oct-7" data-newest="1">
+    
+    <div class="poster">
+      <video controls preload="none" poster="out/thumbs/harvey-lexis-mtd-oct-7.jpg">
+        <source src="out/harvey-lexis-mtd-oct-7.mp4" type="video/mp4">
+        <track kind="captions" src="out/harvey-lexis-mtd-oct-7.vtt" srclang="en" label="English">
+      </video>
+      <a class="play-fab" href="out/harvey-lexis-mtd-oct-7.mp4">▶</a>
+    </div>
+    <div class="meta">
+      <div class="kicker-row">
+        <div class="kicker">Agents · Oct 7, 2026</div>
+        <span class="new">LATEST</span>
+        <span class="topic-pill" data-t="agents">Agents / xAI</span>
+      </div>
+      <h2>Harvey + LexisNexis: Motion to Dismiss agent</h2>
+      <p class="sub">Four-step agentic litigation drafting with a human approval gate — a pattern for law-firm workflows.</p>
+      <div class="pills">
+        <span>56s</span>
+        <span>NEW · MP4</span>
+        <span class="ok">grounding PASS · 11# · 5q · 1u</span>
+        <span class="src-badge">1 sources</span>
+      </div>
+      <details><summary>Scenes</summary><ol><li><b>kinetic</b> Motion to Dismiss drafting agent</li><li><b>flow</b> How the workflow runs</li><li><b>cards</b> Forum-correct vehicles</li><li><b>kinetic</b> Available to Harvey customers</li><li><b>quote</b> Law-firm angle</li></ol></details>
+      <details><summary>Sources (1)</summary><ul><li><a href="https://www.harvey.ai/blog/motion-to-dismiss-workflow-lexisnexis" target="_blank" rel="noopener">Harvey: Motion to Dismiss workflow with LexisNexis</a></li></ul></details>
+      <div class="links"><a href="explainers/harvey-lexis-mtd-oct-7.html">Open kinetic</a><a href="out/harvey-lexis-mtd-oct-7.mp4" download>Download MP4</a><a href="screenshots/harvey-lexis-mtd-oct-7_contact.png" target="_blank">Contact sheet</a><a href="out/harvey-lexis-mtd-oct-7.storyboard.json" target="_blank">Storyboard</a><a href="out/harvey-lexis-mtd-oct-7.grounding.json" target="_blank">Grounding</a><a href="out/harvey-lexis-mtd-oct-7.srt" target="_blank">Captions</a></div>
+    </div>
+  </article>
+  <article class="card" data-topic="spacex" data-id="starlink-leo-risk-oct-6" data-newest="1">
+    
+    <div class="poster">
+      <video controls preload="none" poster="out/thumbs/starlink-leo-risk-oct-6.jpg">
+        <source src="out/starlink-leo-risk-oct-6.mp4" type="video/mp4">
+        <track kind="captions" src="out/starlink-leo-risk-oct-6.vtt" srclang="en" label="English">
+      </video>
+      <a class="play-fab" href="out/starlink-leo-risk-oct-6.mp4">▶</a>
+    </div>
+    <div class="meta">
+      <div class="kicker-row">
+        <div class="kicker">Starlink · Oct 6, 2026</div>
+        <span class="new">LATEST</span>
+        <span class="topic-pill" data-t="spacex">SpaceX / Starlink</span>
+      </div>
+      <h2>Starlink: undisclosed maneuvers are the biggest LEO risk</h2>
+      <p class="sub">11k+ sats publishing hourly ephemeris, ~650 third-party encounters, and 164,000 near-misses after surprise moves.</p>
+      <div class="pills">
+        <span>50s</span>
+        <span>NEW · MP4</span>
+        <span class="ok">grounding PASS · 28# · 5q · 2u</span>
+        <span class="src-badge">2 sources</span>
+      </div>
+      <details><summary>Scenes</summary><ol><li><b>quote</b> Biggest risk in LEO</li><li><b>bignumber</b> What Starlink says it already does</li><li><b>cards</b> Third-party encounters in 2026</li><li><b>bignumber</b> After unannounced maneuvers</li><li><b>kinetic</b> First V3 deploy video from Starship</li></ol></details>
+      <details><summary>Sources (2)</summary><ul><li><a href="https://teslanorth.com/2026/10/06/starlink-undisclosed-maneuvers-leo-risk/" target="_blank" rel="noopener">TeslaNorth: Starlink undisclosed maneuvers LEO risk</a></li><li><a href="https://teslanorth.com/2026/10/06/starlink-v3-deploying-from-starship-video/" target="_blank" rel="noopener">TeslaNorth: V3 deploying from Starship video</a></li></ul></details>
+      <div class="links"><a href="explainers/starlink-leo-risk-oct-6.html">Open kinetic</a><a href="out/starlink-leo-risk-oct-6.mp4" download>Download MP4</a><a href="screenshots/starlink-leo-risk-oct-6_contact.png" target="_blank">Contact sheet</a><a href="out/starlink-leo-risk-oct-6.storyboard.json" target="_blank">Storyboard</a><a href="out/starlink-leo-risk-oct-6.grounding.json" target="_blank">Grounding</a><a href="out/starlink-leo-risk-oct-6.srt" target="_blank">Captions</a></div>
+    </div>
+  </article>
+  <article class="card" data-topic="ravens" data-id="ravens-jurgens-trade-oct-7" data-newest="1">
+    
+    <div class="poster">
+      <video controls preload="none" poster="out/thumbs/ravens-jurgens-trade-oct-7.jpg">
+        <source src="out/ravens-jurgens-trade-oct-7.mp4" type="video/mp4">
+        <track kind="captions" src="out/ravens-jurgens-trade-oct-7.vtt" srclang="en" label="English">
+      </video>
+      <a class="play-fab" href="out/ravens-jurgens-trade-oct-7.mp4">▶</a>
+    </div>
+    <div class="meta">
+      <div class="kicker-row">
+        <div class="kicker">Ravens · Oct 7, 2026</div>
+        <span class="new">LATEST</span>
+        <span class="topic-pill" data-t="ravens">Ravens</span>
+      </div>
+      <h2>Ravens land Cam Jurgens: the biggest trade since Roquan</h2>
+      <p class="sub">A Pro Bowl center from Philly, an unconventional Lamar sprain, and Sunday night at Atlanta.</p>
+      <div class="pills">
+        <span>70s</span>
+        <span>NEW · MP4</span>
+        <span class="ok">grounding PASS · 35# · 13q · 4u</span>
+        <span class="src-badge">4 sources</span>
+      </div>
+      <details><summary>Scenes</summary><ol><li><b>kinetic</b> Ravens acquire C *Cam Jurgens* from the Eagles</li><li><b>cards</b> What each side gave up</li><li><b>cards</b> Two-time Pro Bowler, age *27*</li><li><b>quote</b> An &quot;unconventional&quot; ankle sprain</li><li><b>cards</b> Week 5 at Atlanta</li></ol></details>
+      <details><summary>Sources (4)</summary><ul><li><a href="https://www.baltimoreravens.com/news/ravens-trade-cam-jurgens-center-pro-bowl-injuries-2026" target="_blank" rel="noopener">Ravens.com: Cam Jurgens trade</a></li><li><a href="https://www.nfl.com/news/cam-jurgens-ravens-eagles-trade" target="_blank" rel="noopener">NFL.com: Cam Jurgens Ravens-Eagles trade</a></li><li><a href="https://www.nbcsports.com/fantasy/football/player-news/2026-10-07/lamars-ankle-sprain-neither-low-nor-high" target="_blank" rel="noopener">NBC Sports: Lamar ankle sprain neither low nor high</a></li><li><a href="https://www.oddsjournal.io/blog/lamar-jackson-ankle-update-mri-done-falcons-now-3-point-favorites-vs-ravens" target="_blank" rel="noopener">Odds Journal: Falcons now 3-point favorites</a></li></ul></details>
+      <div class="links"><a href="explainers/ravens-jurgens-trade-oct-7.html">Open kinetic</a><a href="out/ravens-jurgens-trade-oct-7.mp4" download>Download MP4</a><a href="screenshots/ravens-jurgens-trade-oct-7_contact.png" target="_blank">Contact sheet</a><a href="out/ravens-jurgens-trade-oct-7.storyboard.json" target="_blank">Storyboard</a><a href="out/ravens-jurgens-trade-oct-7.grounding.json" target="_blank">Grounding</a><a href="out/ravens-jurgens-trade-oct-7.srt" target="_blank">Captions</a></div>
+    </div>
+  </article>
+  <article class="card" data-topic="spacex" data-id="starlink-mobile-fcc-oct-7" data-newest="1">
+    
+    <div class="poster">
+      <video controls preload="none" poster="out/thumbs/starlink-mobile-fcc-oct-7.jpg">
+        <source src="out/starlink-mobile-fcc-oct-7.mp4" type="video/mp4">
+        <track kind="captions" src="out/starlink-mobile-fcc-oct-7.vtt" srclang="en" label="English">
+      </video>
+      <a class="play-fab" href="out/starlink-mobile-fcc-oct-7.mp4">▶</a>
+    </div>
+    <div class="meta">
+      <div class="kicker-row">
+        <div class="kicker">Starlink · Oct 7, 2026</div>
+        <span class="new">LATEST</span>
+        <span class="topic-pill" data-t="spacex">SpaceX / Starlink</span>
+      </div>
+      <h2>FCC green-lights 15,000 Starlink Mobile satellites</h2>
+      <p class="sub">Direct-to-device, 150 Mbps targets, and a path to compete with the big three carriers.</p>
+      <div class="pills">
+        <span>58s</span>
+        <span>NEW · MP4</span>
+        <span class="ok">grounding PASS · 36# · 7q · 2u</span>
+        <span class="src-badge">2 sources</span>
+      </div>
+      <details><summary>Scenes</summary><ol><li><b>bignumber</b> Next-gen Starlink Mobile, approved</li><li><b>cards</b> What SpaceX can use</li><li><b>kinetic</b> No terrestrial carrier partner required</li><li><b>bars</b> From today&#x27;s D2D to 5G-like targets</li><li><b>timeline</b> When the constellation must fly</li></ol></details>
+      <details><summary>Sources (2)</summary><ul><li><a href="https://uk.pcmag.com/wireless-carriers/167711/fcc-green-lights-spacexs-15000-satellites-for-starlink-mobile" target="_blank" rel="noopener">PCMag: FCC green-lights SpaceX&#x27;s 15,000 satellites for Starlink Mobile</a></li><li><a href="https://spacenews.com/fcc-tees-up-another-d2d-boost-after-approving-starlink-mobile-upgrade/" target="_blank" rel="noopener">SpaceNews: FCC tees up another D2D boost</a></li></ul></details>
+      <div class="links"><a href="explainers/starlink-mobile-fcc-oct-7.html">Open kinetic</a><a href="out/starlink-mobile-fcc-oct-7.mp4" download>Download MP4</a><a href="screenshots/starlink-mobile-fcc-oct-7_contact.png" target="_blank">Contact sheet</a><a href="out/starlink-mobile-fcc-oct-7.storyboard.json" target="_blank">Storyboard</a><a href="out/starlink-mobile-fcc-oct-7.grounding.json" target="_blank">Grounding</a><a href="out/starlink-mobile-fcc-oct-7.srt" target="_blank">Captions</a></div>
+    </div>
+  </article>
+  <article class="card" data-topic="spacex" data-id="starmind-1m-ai-satellites" data-newest="0">
+    
+    <a class="poster kinetic" href="explainers/starmind-1m-ai-satellites.html">
+      <img src='explainers/posters/starmind-1m-ai-satellites.svg' alt='' loading='lazy'>
+      <span class="play-fab">▶ Play</span>
+      <span class="badge-kin">Kinetic</span>
+    </a>
+    <div class="meta">
+      <div class="kicker-row">
+        <div class="kicker">SpaceX · Oct 6, 2026</div>
+        
+        <span class="topic-pill" data-t="spacex">SpaceX / Starlink</span>
+      </div>
+      <h2>Starmind: SpaceX&#x27;s plan for up to 1 million AI satellites</h2>
+      <p class="sub">What SpaceX put in writing, and what it showed at the International Astronautical Congress.</p>
+      <div class="pills">
+        <span>59s</span>
+        <span>kinetic canvas</span>
+        <span class="ok">grounding PASS</span>
+        <span class="src-badge">4 sources</span>
+      </div>
+      <details><summary>Scenes</summary><ol><li><b>dots</b> A new SpaceX Space Safety page sets the scale</li><li><b>cluster</b> Compute would run in *clusters*</li><li><b>quote</b> The first look</li><li><b>cards</b> Each spacecraft out-powers the space station</li><li><b>timeline</b> From concept video to orbit</li><li><b>kinetic</b> Not everyone is cheering</li></ol></details>
+      <details><summary>Sources (4)</summary><ul><li><a href="https://uk.pcmag.com/networking/167706/bigger-than-starlink-spacex-provides-new-look-at-orbital-data-center-plans" target="_blank" rel="noopener">PCMag: Bigger than Starlink, SpaceX&#x27;s orbital data center plans</a></li><li><a href="https://www.teslarati.com/spacex-starmind-space-safety/" target="_blank" rel="noopener">Teslarati: Starmind on SpaceX&#x27;s Space Safety page</a></li><li><a href="https://x.com/elonmusk/status/2105718806769512812" target="_blank" rel="noopener">Elon Musk on X: Star Mind 250kW (pinned, Oct 1)</a></li><li><a href="https://teslanorth.com/2026/10/06/starlink-undisclosed-maneuvers-leo-risk/" target="_blank" rel="noopener">TeslaNorth: Starlink on undisclosed maneuvers</a></li></ul></details>
+      <div class="links"><a href="explainers/starmind-1m-ai-satellites.html">Open kinetic</a><a href="screenshots/starmind-1m-ai-satellites_contact.png" target="_blank">Contact sheet</a><a href="out/starmind-1m-ai-satellites.storyboard.json" target="_blank">Storyboard</a></div>
+    </div>
+  </article>
+  <article class="card" data-topic="spacex" data-id="starship-flight-14-to-orbit" data-newest="0">
+    
+    <a class="poster kinetic" href="explainers/starship-flight-14-to-orbit.html">
+      <img src='explainers/posters/starship-flight-14-to-orbit.svg' alt='' loading='lazy'>
+      <span class="play-fab">▶ Play</span>
+      <span class="badge-kin">Kinetic</span>
+    </a>
+    <div class="meta">
+      <div class="kicker-row">
+        <div class="kicker">SpaceX · Starship · Sep 28 – Oct 6, 2026</div>
+        
+        <span class="topic-pill" data-t="spacex">SpaceX / Starlink</span>
+      </div>
+      <h2>Starship reaches orbit, and what comes next</h2>
+      <p class="sub">Flight 14&#x27;s first orbital trip, its new Starlink payload, and the road to Flight 15.</p>
+      <div class="pills">
+        <span>51s</span>
+        <span>kinetic canvas</span>
+        <span class="ok">grounding PASS</span>
+        <span class="src-badge">6 sources</span>
+      </div>
+      <details><summary>Scenes</summary><ol><li><b>trajectory</b> The first Starship flight to reach *orbit*</li><li><b>cards</b> Next-gen Starlinks, too big for Falcon 9</li><li><b>bars</b> Planned 10 hours, flew about 3</li><li><b>cards</b> SpaceX wants a methane pipeline</li><li><b>timeline</b> The road to a ship *catch*</li></ol></details>
+      <details><summary>Sources (6)</summary><ul><li><a href="https://spaceflightnow.com/2026/09/28/starship-returns-to-earth-rocket-splashes-down-north-of-hawaii-after-three-hour-flight/" target="_blank" rel="noopener">Spaceflight Now: Starship splashes down north of Hawaii</a></li><li><a href="https://arstechnica.com/space/2026/09/starships-first-orbital-launch-gives-lift-to-spacexs-next-gen-starlinks/" target="_blank" rel="noopener">Ars Technica: Starship&#x27;s first orbital launch</a></li><li><a href="https://www.spacex.com/launches/starship-flight-14" target="_blank" rel="noopener">SpaceX: Starship Flight 14</a></li><li><a href="https://www.reuters.com/business/energy/spacex-seeks-approval-florida-gas-pipeline-support-cape-canaveral-launches-2026-10-05/" target="_blank" rel="noopener">Reuters: SpaceX seeks Florida gas pipeline</a></li><li><a href="https://www.cnbc.com/2026/10/05/spacex-stock-climbs-highest-since-june-returning-musk-to-trillionaire.html" target="_blank" rel="noopener">CNBC: SpaceX stock climbs (Morgan Stanley note)</a></li><li><a href="https://spiketoday.com/starship-flight-15-launch-date/" target="_blank" rel="noopener">Spike Today: Starship Flight 15 launch date</a></li></ul></details>
+      <div class="links"><a href="explainers/starship-flight-14-to-orbit.html">Open kinetic</a><a href="screenshots/starship-flight-14-to-orbit_contact.png" target="_blank">Contact sheet</a><a href="out/starship-flight-14-to-orbit.storyboard.json" target="_blank">Storyboard</a></div>
+    </div>
+  </article>
+  <article class="card" data-topic="spacex" data-id="spacex-stock-rally-oct-5-6" data-newest="0">
+    
+    <a class="poster kinetic" href="explainers/spacex-stock-rally-oct-5-6.html">
+      <img src='explainers/posters/spacex-stock-rally-oct-5-6.svg' alt='' loading='lazy'>
+      <span class="play-fab">▶ Play</span>
+      <span class="badge-kin">Kinetic</span>
+    </a>
+    <div class="meta">
+      <div class="kicker-row">
+        <div class="kicker">SpaceX stock · Oct 5–6, 2026</div>
+        
+        <span class="topic-pill" data-t="spacex">SpaceX / Starlink</span>
+      </div>
+      <h2>SpaceX stock&#x27;s two-day run, explained</h2>
+      <p class="sub">An 8% jump, two bullish analyst notes, and what the options market is pricing.</p>
+      <div class="pills">
+        <span>51s</span>
+        <span>kinetic canvas</span>
+        <span class="ok">grounding PASS</span>
+        <span class="src-badge">4 sources</span>
+      </div>
+      <details><summary>Scenes</summary><ol><li><b>bignumber</b> Highest close since *mid-June*</li><li><b>line</b> A smaller gain, after a higher high</li><li><b>bars</b> Price targets vs. where it trades</li><li><b>cards</b> Calmer than the debut</li><li><b>kinetic</b> Two things to watch</li></ol></details>
+      <details><summary>Sources (4)</summary><ul><li><a href="https://www.cnbc.com/2026/10/05/spacex-stock-climbs-highest-since-june-returning-musk-to-trillionaire.html" target="_blank" rel="noopener">CNBC: SpaceX stock climbs to highest since June</a></li><li><a href="https://www.gurufocus.com/news/9111673/spacex-stock-rises-again-goldman-sachs-hikes-price-target-on-ai-surge" target="_blank" rel="noopener">GuruFocus: Goldman hikes SpaceX price target</a></li><li><a href="https://www.benzinga.com/markets/tech/26/10/62207226/spacex-reclaims-its-debut-close-but-options-are-pricing-a-slow-grind-ahead" target="_blank" rel="noopener">Benzinga: options pricing a slow grind</a></li><li><a href="https://www.cnbc.com/2026/10/06/spacex-stock-is-taking-off-again-but-with-one-key-difference-this-time.html" target="_blank" rel="noopener">CNBC: SpaceX stock is taking off again</a></li></ul></details>
+      <div class="links"><a href="explainers/spacex-stock-rally-oct-5-6.html">Open kinetic</a><a href="screenshots/spacex-stock-rally-oct-5-6_contact.png" target="_blank">Contact sheet</a><a href="out/spacex-stock-rally-oct-5-6.storyboard.json" target="_blank">Storyboard</a></div>
+    </div>
+  </article>
+  <article class="card" data-topic="spacex" data-id="spacexai-to-spacexsi-rename" data-newest="0">
+    
+    <a class="poster kinetic" href="explainers/spacexai-to-spacexsi-rename.html">
+      <img src='explainers/posters/spacexai-to-spacexsi-rename.svg' alt='' loading='lazy'>
+      <span class="play-fab">▶ Play</span>
+      <span class="badge-kin">Kinetic</span>
+    </a>
+    <div class="meta">
+      <div class="kicker-row">
+        <div class="kicker">SpaceXAI / xAI · Oct 4–6, 2026</div>
+        
+        <span class="topic-pill" data-t="spacex">SpaceX / Starlink</span>
+      </div>
+      <h2>SpaceXAI to SpaceXSI: the rename that hasn&#x27;t happened yet</h2>
+      <p class="sub">Three short posts, one promise, and three days of no visible change.</p>
+      <div class="pills">
+        <span>51s</span>
+        <span>kinetic canvas</span>
+        <span class="ok">grounding PASS</span>
+        <span class="src-badge">6 sources</span>
+      </div>
+      <details><summary>Scenes</summary><ol><li><b>kinetic</b> Three posts from Elon Musk</li><li><b>quote</b> The promise</li><li><b>kinetic</b> Following Washington&#x27;s lead</li><li><b>timeline</b> Promised Sunday. Still not done.</li><li><b>cards</b> Quiet on the official channels</li></ol></details>
+      <details><summary>Sources (6)</summary><ul><li><a href="https://www.dailymaverick.co.za/article/2026-10-04-musk-says-he-will-rename-spacexai-to-spacexsi/" target="_blank" rel="noopener">Reuters via Daily Maverick: Musk says he will rename SpaceXAI</a></li><li><a href="https://www.teslarati.com/elon-musk-follows-trumps-lead-says-a-spacex-name-change-is-coming/" target="_blank" rel="noopener">Teslarati: a SpaceX name change is coming</a></li><li><a href="https://www.euronews.com/2026/10/05/musk-to-follow-trump-and-rebrand-spacexai-as-spacexsi" target="_blank" rel="noopener">Euronews: Musk to rebrand SpaceXAI as SpaceXSI</a></li><li><a href="https://www.tomshardware.com/tech-industry/artificial-intelligence/elon-musk-pledges-spacexsi-rebrand-after-trumps-executive-order-to-use-super-intelligence-moniker-president-trump-has-signed-the-executive-order-to-replace-artificial-intelligence" target="_blank" rel="noopener">Tom&#x27;s Hardware: SpaceXSI rebrand pledge</a></li><li><a href="https://www.techrepublic.com/article/news-musk-spacexsi-rebrand-super-intelligence/" target="_blank" rel="noopener">TechRepublic: Musk SpaceXSI rebrand</a></li><li><a href="https://x.ai/changelog/bot" target="_blank" rel="noopener">x.ai/news and the Grok Bot changelog</a></li></ul></details>
+      <div class="links"><a href="explainers/spacexai-to-spacexsi-rename.html">Open kinetic</a><a href="screenshots/spacexai-to-spacexsi-rename_contact.png" target="_blank">Contact sheet</a><a href="out/spacexai-to-spacexsi-rename.storyboard.json" target="_blank">Storyboard</a></div>
+    </div>
+  </article>
+  <article class="card" data-topic="tesla" data-id="tesla-fsd-europe-oct-6" data-newest="0">
+    
+    <a class="poster kinetic" href="explainers/tesla-fsd-europe-oct-6.html">
+      <img src='explainers/posters/tesla-fsd-europe-oct-6.svg' alt='' loading='lazy'>
+      <span class="play-fab">▶ Play</span>
+      <span class="badge-kin">Kinetic</span>
+    </a>
+    <div class="meta">
+      <div class="kicker-row">
+        <div class="kicker">Tesla · Oct 6, 2026</div>
+        
+        <span class="topic-pill" data-t="tesla">Tesla</span>
+      </div>
+      <h2>Tesla FSD in Europe: Germany is on board, the EU waits</h2>
+      <p class="sub">What Germany agreed with Tesla, what the EU did not decide, and what happens next.</p>
+      <div class="pills">
+        <span>51s</span>
+        <span>kinetic canvas</span>
+        <span class="ok">grounding PASS</span>
+        <span class="src-badge">4 sources</span>
+      </div>
+      <details><summary>Scenes</summary><ol><li><b>kinetic</b> Germany backs *EU approval* of FSD</li><li><b>cards</b> Agreed with Tesla in September</li><li><b>quote</b> A new name for Europe?</li><li><b>flow</b> How FSD could reach German roads</li><li><b>bignumber</b> Already legal in part of Europe</li></ol></details>
+      <details><summary>Sources (4)</summary><ul><li><a href="https://eletric-vehicles.com/tesla/tesla-reached-deal-with-germany-on-fsd-speed-and-liability-ministry-says/" target="_blank" rel="noopener">eletric-vehicles.com: Tesla reached deal with Germany on FSD</a></li><li><a href="https://notateslakiller.com/en/tesla-fsd-tcmv-oct-6-no-vote-germany-bilger/" target="_blank" rel="noopener">NotATeslaKiller: EU committee, no vote; Bilger</a></li><li><a href="https://exa.ai/library/markets/stock/TSLA?date=2026-10-06" target="_blank" rel="noopener">Exa: TSLA quote, Oct 6</a></li><li><a href="https://nexqual.com/TSLA" target="_blank" rel="noopener">Nexqual: TSLA</a></li></ul></details>
+      <div class="links"><a href="explainers/tesla-fsd-europe-oct-6.html">Open kinetic</a><a href="screenshots/tesla-fsd-europe-oct-6_contact.png" target="_blank">Contact sheet</a><a href="out/tesla-fsd-europe-oct-6.storyboard.json" target="_blank">Storyboard</a></div>
+    </div>
+  </article>
+  <article class="card" data-topic="agents" data-id="agents-go-to-work-oct-6" data-newest="0">
+    
+    <a class="poster kinetic" href="explainers/agents-go-to-work-oct-6.html">
+      <img src='explainers/posters/agents-go-to-work-oct-6.svg' alt='' loading='lazy'>
+      <span class="play-fab">▶ Play</span>
+      <span class="badge-kin">Kinetic</span>
+    </a>
+    <div class="meta">
+      <div class="kicker-row">
+        <div class="kicker">Agent tooling · Oct 6, 2026</div>
+        
+        <span class="topic-pill" data-t="agents">Agents / xAI</span>
+      </div>
+      <h2>Agents go to work: Oct 6 in agent tooling</h2>
+      <p class="sub">Claude in Google Docs, OpenAI&#x27;s contracting agents, a 10x-faster decisions API, and a tip for your bot fleet.</p>
+      <div class="pills">
+        <span>51s</span>
+        <span>kinetic canvas</span>
+        <span class="ok">grounding PASS</span>
+        <span class="src-badge">5 sources</span>
+      </div>
+      <details><summary>Scenes</summary><ol><li><b>flow</b> Claude for Google Workspace</li><li><b>bars</b> Computer-use agents trained on contracting work</li><li><b>bars</b> Time per attempt, *about halved*</li><li><b>cards</b> Typed answers for routing agents</li><li><b>kinetic</b> A bookmarked tip from @benln</li></ol></details>
+      <details><summary>Sources (5)</summary><ul><li><a href="https://claude.com/resources/articles/claude-now-works-in-google-docs-sheets-and-slides" target="_blank" rel="noopener">Claude: Claude now works in Docs, Sheets and Slides</a></li><li><a href="https://9to5google.com/2026/10/06/claude-google-docs-sheet-slides/" target="_blank" rel="noopener">9to5Google: Claude for Google Docs, Sheets, Slides</a></li><li><a href="https://openai.com/index/advancing-computer-use-with-ironclad/" target="_blank" rel="noopener">OpenAI: Advancing computer use with Ironclad</a></li><li><a href="https://www.unite.ai/openai-releases-decisions-api-in-public-beta-powered-by-gpt-6-luna/" target="_blank" rel="noopener">Unite.AI: OpenAI Decisions API public beta</a></li><li><a href="https://x.com/benln/status/2107472129960575369" target="_blank" rel="noopener">@benln on X: Grok Bot guides tip</a></li></ul></details>
+      <div class="links"><a href="explainers/agents-go-to-work-oct-6.html">Open kinetic</a><a href="screenshots/agents-go-to-work-oct-6_contact.png" target="_blank">Contact sheet</a><a href="out/agents-go-to-work-oct-6.storyboard.json" target="_blank">Storyboard</a></div>
+    </div>
+  </article>
+  <article class="card" data-topic="ravens" data-id="ravens-lamar-line-swing" data-newest="0">
+    
+    <a class="poster kinetic" href="explainers/ravens-lamar-line-swing.html">
+      <img src='explainers/posters/ravens-lamar-line-swing.svg' alt='' loading='lazy'>
+      <span class="play-fab">▶ Play</span>
+      <span class="badge-kin">Kinetic</span>
+    </a>
+    <div class="meta">
+      <div class="kicker-row">
+        <div class="kicker">Ravens · Oct 6, 2026</div>
+        
+        <span class="topic-pill" data-t="ravens">Ravens</span>
+      </div>
+      <h2>Lamar&#x27;s ankle and the 9-point line swing</h2>
+      <p class="sub">How one MRI flipped Sunday night at Atlanta, in five quick beats.</p>
+      <div class="pills">
+        <span>51s</span>
+        <span>kinetic canvas</span>
+        <span class="ok">grounding PASS</span>
+        <span class="src-badge">4 sources</span>
+      </div>
+      <details><summary>Scenes</summary><ol><li><b>kinetic</b> Left ankle sprain for *Lamar Jackson*</li><li><b>line</b> From favorite to underdog</li><li><b>cards</b> What the numbers say</li><li><b>kinetic</b> Tyler Huntley takes the first-team reps</li><li><b>cards</b> The rest of the injury list</li></ol></details>
+      <details><summary>Sources (4)</summary><ul><li><a href="https://www.espn.com/nfl/story/_/id/50116449/sources-ravens-qb-lamar-jackson-dealing-ankle-sprain" target="_blank" rel="noopener">ESPN: Lamar Jackson dealing with ankle sprain</a></li><li><a href="https://www.cbssports.com/nfl/news/lamar-jackson-injury-update-ravens-qb-dealing-with-ankle-sprain/" target="_blank" rel="noopener">CBS Sports: Lamar Jackson injury update</a></li><li><a href="https://www.covers.com/industry/ravens-falcons-line-swings-9-points-amid-lamar-injury-doubts-oct-6-2026" target="_blank" rel="noopener">Covers: Ravens-Falcons line swings 9 points</a></li><li><a href="https://www.baltimoreravens.com/news/durham-smythe-torn-achilles-ravens-tight-end-out-for-season" target="_blank" rel="noopener">Ravens.com: Durham Smythe out for season</a></li></ul></details>
+      <div class="links"><a href="explainers/ravens-lamar-line-swing.html">Open kinetic</a><a href="screenshots/ravens-lamar-line-swing_contact.png" target="_blank">Contact sheet</a><a href="out/ravens-lamar-line-swing.storyboard.json" target="_blank">Storyboard</a></div>
+    </div>
+  </article>
+  <div class="empty" id="empty" hidden>No explainers in this filter.</div>
+</main>
+
+<footer>
+  Remastered Sat Oct 10 afternoon. Numbers, quotes and source URLs are grounding-checked against
+  <code>/workspace/ij_*</code> journal files. Kinetic players run entirely in-browser (canvas + captions).
+  MP4 pipeline: cairo + ffmpeg + local piper TTS — no paid APIs.
+  Rebuild with <code>python3 build_gallery.py</code> · new kinetic: <code>python3 make_kinetic.py storyboards/…</code>
+  · render: <code>python3 make_explainer.py storyboards/…</code>.
+</footer>
+</div>
+<script>
+(function(){
+  const btns = [...document.querySelectorAll('.fbtn')];
+  const cards = [...document.querySelectorAll('.card')];
+  const empty = document.getElementById('empty');
+  function apply(f){
+    btns.forEach(b => b.classList.toggle('active', b.dataset.filter === f));
+    let n = 0;
+    cards.forEach(c => {
+      const show = f === 'all' || (f === 'newest' ? c.dataset.newest === '1' : c.dataset.topic === f);
+      c.classList.toggle('hidden', !show);
+      if(show) n++;
+    });
+    empty.hidden = n > 0;
+  }
+  btns.forEach(b => b.addEventListener('click', () => apply(b.dataset.filter)));
+})();
+</script>
+</body></html>

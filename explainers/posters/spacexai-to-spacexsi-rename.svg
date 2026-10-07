@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1280" height="720" viewBox="0 0 1280 720">
+  <defs>
+    <radialGradient id="g" cx="80%" cy="0%" r="80%">
+      <stop offset="0%" stop-color="#3b2a6e" stop-opacity="0.7"/>
+      <stop offset="100%" stop-color="#060a12"/>
+    </radialGradient>
+  </defs>
+  <rect width="1280" height="720" fill="url(#g)"/>
+  <text x="64" y="90" fill="#a78bfa" font-family="ui-monospace,monospace" font-size="18" font-weight="700" letter-spacing="3">SPACEXAI / XAI · OCT 4–6, 2026</text>
+  <foreignObject x="64" y="140" width="1000" height="280">
+    <div xmlns="http://www.w3.org/1999/xhtml" style="color:#fff;font:800 44px/1.15 Inter,system-ui,sans-serif">SpaceXAI to SpaceXSI: the rename that hasn&#x27;t happened yet</div>
+  </foreignObject>
+  <circle cx="1080" cy="360" r="140" fill="none" stroke="#a78bfa" stroke-opacity="0.4" stroke-width="2"/>
+  <circle cx="1080" cy="360" r="100" fill="none" stroke="#34d399" stroke-opacity="0.35" stroke-width="2"/>
+  <text x="64" y="660" fill="#93a0bf" font-family="Inter,system-ui,sans-serif" font-size="20">Explainer Studio · kinetic canvas</text>
+</svg>

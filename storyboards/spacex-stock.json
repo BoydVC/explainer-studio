@@ -1,0 +1,181 @@
+{
+  "id": "spacex-stock-rally-oct-5-6",
+  "title": "SpaceX stock's two-day run, explained",
+  "kicker": "SpaceX stock · Oct 5–6, 2026",
+  "subtitle": "An 8% jump, two bullish analyst notes, and what the options market is pricing.",
+  "title_narration": "SpaceX stock's two-day run, explained.",
+  "theme": "markets",
+  "seed": 61,
+  "length_scale": 0.93,
+  "end_seconds": 6.5,
+  "source_files": [
+    "/workspace/ij_2026-10-05_research.md",
+    "/workspace/ij_2026-10-06_research.md"
+  ],
+  "as_of": "Grounded in Jim's Interest Journal research for Oct 5 and Oct 6, 2026. Prices are approximate as reported; not investment advice.",
+  "scenes": [
+    {
+      "type": "bignumber",
+      "label": "Monday, Oct 5",
+      "heading": "Highest close since *mid-June*",
+      "data": {
+        "value": 8,
+        "prefix": "+",
+        "suffix": "%",
+        "display": "+~8%",
+        "pre": "SpaceX shares",
+        "label": "Highest close since mid-June, after the IPO",
+        "compare": [
+          {
+            "big": "$171.09",
+            "label": "Monday close"
+          },
+          {
+            "big": "~$1.03T",
+            "label": "Musk's net worth, per Forbes"
+          }
+        ]
+      },
+      "caption": "SpaceX stock jumped about 8% on Monday to close at $171.09, the highest since mid-June after the IPO. Forbes has Musk back at about $1.03 trillion.",
+      "narration": "SpaceX stock jumped about 8% on Monday to close at $171.09, the highest since mid-June after the IPO. Forbes has Musk back at about 1.03 trillion dollars.",
+      "evidence": [
+        "SpaceX stock up ~8%; Musk is a trillionaire again.",
+        "Shares closed at $171.09, the highest since mid-June after the IPO.",
+        "Forbes has Musk at about $1.03T."
+      ]
+    },
+    {
+      "type": "line",
+      "label": "Tuesday, Oct 6",
+      "heading": "A smaller gain, after a higher high",
+      "data": {
+        "note": "+0.5% ON THE DAY",
+        "points": [
+          {
+            "label": "Monday close",
+            "value": 171.09,
+            "display": "$171.09"
+          },
+          {
+            "label": "Tuesday intraday high",
+            "value": 176.42,
+            "display": "~$176.42"
+          },
+          {
+            "label": "Tuesday close",
+            "value": 171.92,
+            "display": "~$171.92",
+            "highlight": true
+          }
+        ]
+      },
+      "caption": "On Tuesday it rose another 0.5% to about $171.92, after touching about $176.42 intraday.",
+      "evidence": [
+        "SpaceX stock +0.5% to about $171.92, after Monday's ~8% jump.",
+        "It hit about $176.42 intraday and traded around $173.66 at midday."
+      ]
+    },
+    {
+      "type": "bars",
+      "label": "Wall Street",
+      "heading": "Price targets vs. where it trades",
+      "data": {
+        "prefix": "$",
+        "max": 300,
+        "items": [
+          {
+            "label": "Morgan Stanley",
+            "value": 300,
+            "display": "$300"
+          },
+          {
+            "label": "Goldman (new)",
+            "value": 230,
+            "display": "$230",
+            "highlight": true
+          },
+          {
+            "label": "Goldman (old)",
+            "value": 220,
+            "display": "$220"
+          },
+          {
+            "label": "Tuesday close",
+            "value": 171.92,
+            "display": "~$171.92"
+          }
+        ],
+        "note": "Both firms rate it Buy"
+      },
+      "caption": "Morgan Stanley called the stock cheap, with a Buy rating and a $300 target. On Tuesday, Goldman raised its target to $230 from $220, citing higher forecasts for the AI business.",
+      "evidence": [
+        "called the stock \"cheap\" with a Buy rating and a $300 target",
+        "Goldman's Eric Sheridan raised his target to $230 from $220 and kept Buy, citing higher forecasts for the AI business"
+      ]
+    },
+    {
+      "type": "cards",
+      "label": "The options market",
+      "heading": "Calmer than the debut",
+      "data": {
+        "cards": [
+          {
+            "big": "2x",
+            "label": "Monday's options volume vs. the 30-day average"
+          },
+          {
+            "big": "~55",
+            "label": "implied volatility, vs. over 110 at the June debut"
+          },
+          {
+            "big": "~54%",
+            "label": "priced chance of touching $185 by end of October",
+            "alt": true
+          }
+        ]
+      },
+      "caption": "CNBC noted Monday's options volume was twice the 30-day average. Implied volatility is about 55, versus over 110 at the June debut. Options gave about a 54% chance of touching $185 by the end of October.",
+      "evidence": [
+        "CNBC noted that options volume Monday was twice the 30-day average.",
+        "Implied volatility is about 55, versus over 110 at the June debut.",
+        "Options pricing gave about a 54% chance of touching $185 by the end of October."
+      ]
+    },
+    {
+      "type": "kinetic",
+      "label": "What could move it next",
+      "heading": "Two things to watch",
+      "data": {
+        "lines": [
+          "Morgan Stanley: a Starship *ship catch* could be *\"the biggest positive catalyst since the IPO.\"*",
+          "CNBC: *Q3 earnings* expected in late October."
+        ],
+        "size": 54
+      },
+      "caption": "Morgan Stanley says a Starship ship catch on the next flight could be the biggest positive catalyst since the IPO. And CNBC says Q3 earnings are expected in late October.",
+      "evidence": [
+        "a Starship ship catch on the next flight could be \"the biggest positive catalyst since the IPO.\"",
+        "CNBC also says Q3 earnings are expected in late October."
+      ]
+    }
+  ],
+  "sources": [
+    {
+      "label": "CNBC: SpaceX stock climbs to highest since June",
+      "url": "https://www.cnbc.com/2026/10/05/spacex-stock-climbs-highest-since-june-returning-musk-to-trillionaire.html"
+    },
+    {
+      "label": "GuruFocus: Goldman hikes SpaceX price target",
+      "url": "https://www.gurufocus.com/news/9111673/spacex-stock-rises-again-goldman-sachs-hikes-price-target-on-ai-surge"
+    },
+    {
+      "label": "Benzinga: options pricing a slow grind",
+      "url": "https://www.benzinga.com/markets/tech/26/10/62207226/spacex-reclaims-its-debut-close-but-options-are-pricing-a-slow-grind-ahead"
+    },
+    {
+      "label": "CNBC: SpaceX stock is taking off again",
+      "url": "https://www.cnbc.com/2026/10/06/spacex-stock-is-taking-off-again-but-with-one-key-difference-this-time.html"
+    }
+  ],
+  "music": "pad"
+}

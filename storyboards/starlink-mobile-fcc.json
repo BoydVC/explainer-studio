@@ -1,0 +1,140 @@
+{
+  "id": "starlink-mobile-fcc-oct-7",
+  "title": "FCC green-lights 15,000 Starlink Mobile satellites",
+  "kicker": "Starlink \u00b7 Oct 7, 2026",
+  "subtitle": "Direct-to-device, 150 Mbps targets, and a path to compete with the big three carriers.",
+  "title_narration": "F C C green-lights 15,000 Starlink Mobile satellites.",
+  "theme": "space",
+  "seed": 53,
+  "length_scale": 0.95,
+  "end_seconds": 6.5,
+  "topic": "spacex",
+  "source_files": [
+    "/workspace/ij_2026-10-07_research.md"
+  ],
+  "as_of": "Grounded in Jim's Interest Journal research for Wed Oct 7, 2026. The FCC grant was Tue Oct 6 and reported Wed.",
+  "scenes": [
+    {
+      "type": "bignumber",
+      "label": "The grant",
+      "heading": "Next-gen Starlink Mobile, approved",
+      "data": {
+        "value": 15000,
+        "display": "15,000",
+        "pre": "FCC grant",
+        "label": "next-gen Starlink Mobile (direct-to-device) satellites",
+        "size": 180
+      },
+      "caption": "The FCC approved 15,000 next-gen Starlink Mobile direct-to-device satellites. The grant was Tuesday October 6 and was reported Wednesday.",
+      "evidence": [
+        "FCC approved 15,000 next-gen Starlink Mobile (direct-to-device) satellites.",
+        "The grant was Tue Oct 6 and was reported Wed."
+      ]
+    },
+    {
+      "type": "cards",
+      "label": "Spectrum",
+      "heading": "What SpaceX can use",
+      "data": {
+        "cards": [
+          {
+            "big": "EchoStar",
+            "label": "spectrum in the acquisition \u2014 testing only until close (11/30/2027)"
+          },
+          {
+            "big": "T-Mobile",
+            "label": "PCS G-block",
+            "alt": true
+          }
+        ]
+      },
+      "caption": "SpaceX can use the EchoStar spectrum it's acquiring, for testing only until that deal closes on November 30, 2027, and T-Mobile's PCS G-block.",
+      "evidence": [
+        "SpaceX can use the EchoStar spectrum it's acquiring (testing only until that deal closes, scheduled 11/30/2027) and T-Mobile's PCS G-block."
+      ],
+      "narration": "SpaceX can use the EchoStar spectrum it's acquiring, for testing only until that deal closes on November 30, 2027, and T-Mobile's P C S G-block."
+    },
+    {
+      "type": "kinetic",
+      "label": "The waiver",
+      "heading": "No terrestrial carrier partner required",
+      "data": {
+        "lines": [
+          "The FCC *waived* the partner requirement.",
+          "Opens a path to compete with *AT&T, T-Mobile and Verizon*."
+        ],
+        "size": 56
+      },
+      "caption": "The FCC waived the requirement that SpaceX partner with a terrestrial carrier. That opens a path for Starlink Mobile to compete directly with AT&T, T-Mobile and Verizon.",
+      "evidence": [
+        "The FCC waived the requirement that SpaceX partner with a terrestrial carrier. That opens a path for Starlink Mobile to compete directly with AT&T, T-Mobile and Verizon."
+      ]
+    },
+    {
+      "type": "bars",
+      "label": "Speed promise",
+      "heading": "From today's D2D to 5G-like targets",
+      "data": {
+        "suffix": " Mbps",
+        "decimals": 0,
+        "max": 160,
+        "items": [
+          {
+            "label": "Today (~650 sats)",
+            "value": 4
+          },
+          {
+            "label": "Starlink Mobile promise",
+            "value": 150,
+            "highlight": true
+          }
+        ]
+      },
+      "caption": "SpaceX is promising about 150 megabits per user, 5G-like, versus about 4 megabits today on roughly 650 satellites.",
+      "evidence": [
+        "SpaceX is promising about 150 Mbps per user (5G-like), versus about 4 Mbps today on roughly 650 sats."
+      ],
+      "narration": "SpaceX is promising about 150 megabits per user, 5G-like, versus about 4 megabits today on roughly 650 satellites."
+    },
+    {
+      "type": "timeline",
+      "label": "Deadlines",
+      "heading": "When the constellation must fly",
+      "data": {
+        "events": [
+          {
+            "date": "NOW",
+            "label": "FCC grant for 15,000 Starlink Mobile sats",
+            "status": "done"
+          },
+          {
+            "date": "OCT 2032",
+            "label": "50% of the constellation launched",
+            "status": "next"
+          },
+          {
+            "date": "OCT 2035",
+            "label": "Full constellation",
+            "status": "next"
+          }
+        ]
+      },
+      "caption": "Deadlines: 50 percent launched by October 2032 and the full constellation by October 2035. On Wednesday the FCC also proposed opening more spectrum for direct-to-device service.",
+      "evidence": [
+        "Deadlines: 50% launched by Oct 2032 and the full constellation by Oct 2035.",
+        "On Wed the FCC also proposed opening more spectrum for direct-to-device service."
+      ]
+    }
+  ],
+  "sources": [
+    {
+      "label": "PCMag: FCC green-lights SpaceX's 15,000 satellites for Starlink Mobile",
+      "url": "https://uk.pcmag.com/wireless-carriers/167711/fcc-green-lights-spacexs-15000-satellites-for-starlink-mobile"
+    },
+    {
+      "label": "SpaceNews: FCC tees up another D2D boost",
+      "url": "https://spacenews.com/fcc-tees-up-another-d2d-boost-after-approving-starlink-mobile-upgrade/"
+    }
+  ],
+  "music": "pad"
+}

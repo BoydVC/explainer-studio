@@ -1,0 +1,116 @@
+{
+  "id": "starlink-leo-risk-oct-6",
+  "title": "Starlink: undisclosed maneuvers are the biggest LEO risk",
+  "kicker": "Starlink \u00b7 Oct 6, 2026",
+  "subtitle": "11k+ sats publishing hourly ephemeris, ~650 third-party encounters, and 164,000 near-misses after surprise moves.",
+  "title_narration": "Starlink says undisclosed maneuvers are the biggest risk in low Earth orbit.",
+  "theme": "space",
+  "seed": 62,
+  "length_scale": 0.95,
+  "end_seconds": 6.5,
+  "topic": "spacex",
+  "source_files": [
+    "/workspace/ij_2026-10-06_research.md",
+    "/workspace/ij_2026-10-06_content.md"
+  ],
+  "as_of": "Grounded in Jim's Interest Journal research and content notes for Tue Oct 6, 2026. Figures are SpaceX/Starlink-reported via TeslaNorth coverage.",
+  "scenes": [
+    {
+      "type": "quote",
+      "label": "The claim",
+      "heading": "Biggest risk in LEO",
+      "data": {
+        "text": "other operators' undisclosed maneuvers are \"the biggest risk in LEO.\"",
+        "who": "@Starlink \u00b7 Tue Oct 6 morning"
+      },
+      "caption": "On Tuesday morning Starlink said other operators' undisclosed maneuvers are the biggest risk in LEO.",
+      "evidence": [
+        "Starlink thread: other operators' undisclosed maneuvers are \"the biggest risk in LEO.\""
+      ]
+    },
+    {
+      "type": "bignumber",
+      "label": "The fleet",
+      "heading": "What Starlink says it already does",
+      "data": {
+        "value": 11000,
+        "display": "11k+",
+        "pre": "Starlink runs",
+        "label": "satellites \u2014 publishes ephemeris for the whole fleet every hour",
+        "size": 160
+      },
+      "caption": "Starlink said it runs 11k+ satellites, publishes ephemeris for the whole fleet every hour, and offers free sharing and screening at space-safety.com.",
+      "evidence": [
+        "On Tuesday morning @Starlink said it runs 11k+ satellites, publishes ephemeris (precise orbit positions) for the whole fleet every hour, and offers free sharing and screening at space-safety.com."
+      ],
+      "narration": "Starlink said it runs eleven thousand plus satellites, publishes ephemeris for the whole fleet every hour, and offers free sharing and screening at space-safety.com."
+    },
+    {
+      "type": "cards",
+      "label": "2026 encounters",
+      "heading": "Third-party encounters in 2026",
+      "data": {
+        "cards": [
+          {
+            "big": "~650",
+            "label": "maneuvering third-party satellites Starlink ran into"
+          },
+          {
+            "big": "~half",
+            "label": "shared data \u2014 the rest did not",
+            "alt": true
+          }
+        ]
+      },
+      "caption": "SpaceX says that in 2026 Starlink ran into about 650 maneuvering third-party satellites and only about half shared data.",
+      "evidence": [
+        "SpaceX says that in 2026 Starlink ran into about 650 maneuvering third-party satellites and only about half shared data."
+      ],
+      "narration": "SpaceX says that in 2026 Starlink ran into about 650 maneuvering third-party satellites and only about half shared data."
+    },
+    {
+      "type": "bignumber",
+      "label": "Near-misses",
+      "heading": "After unannounced maneuvers",
+      "data": {
+        "value": 164000,
+        "display": "164,000",
+        "pre": "Logged about",
+        "label": "more collision risks within 4 hours of an unannounced maneuver (six months)",
+        "size": 140
+      },
+      "caption": "It also logged about 164,000 more collision risks within 4 hours of an unannounced maneuver over six months.",
+      "evidence": [
+        "It also logged about 164,000 more collision risks within 4 hours of an unannounced maneuver over six months."
+      ],
+      "narration": "It also logged about 164,000 more collision risks within 4 hours of an unannounced maneuver over six months."
+    },
+    {
+      "type": "kinetic",
+      "label": "Also posted",
+      "heading": "First V3 deploy video from Starship",
+      "data": {
+        "lines": [
+          "First video of *V3* satellites deploying",
+          "from *Starship* (Flight 14)."
+        ],
+        "size": 54
+      },
+      "caption": "The posts came with the first video of V3 satellites deploying from Starship Flight 14.",
+      "evidence": [
+        "The posts came with first video of V3 satellites deploying from Starship (Flight 14)."
+      ]
+    }
+  ],
+  "sources": [
+    {
+      "label": "TeslaNorth: Starlink undisclosed maneuvers LEO risk",
+      "url": "https://teslanorth.com/2026/10/06/starlink-undisclosed-maneuvers-leo-risk/"
+    },
+    {
+      "label": "TeslaNorth: V3 deploying from Starship video",
+      "url": "https://teslanorth.com/2026/10/06/starlink-v3-deploying-from-starship-video/"
+    }
+  ],
+  "music": "pad"
+}

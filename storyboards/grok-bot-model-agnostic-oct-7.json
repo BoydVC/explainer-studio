@@ -1,0 +1,145 @@
+{
+  "id": "grok-bot-model-agnostic-oct-7",
+  "title": "Grok Bot goes model-agnostic",
+  "kicker": "xAI / Grok Bot \u00b7 Oct 7, 2026",
+  "subtitle": "Musk: SpaceX bots will use the best backend \u2014 Claude, MidJourney, Suno \u2014 plus a lightning-fast Grok 4.8 path.",
+  "title_narration": "Grok Bot goes model-agnostic.",
+  "theme": "agents",
+  "seed": 77,
+  "length_scale": 0.95,
+  "end_seconds": 6.5,
+  "topic": "agents",
+  "source_files": [
+    "/workspace/ij_2026-10-07_research.md",
+    "/workspace/ij_2026-10-07_content.md"
+  ],
+  "as_of": "Grounded in Jim's Interest Journal research and content notes for Wed Oct 7, 2026. Routing rules, pricing and data handling were not disclosed.",
+  "scenes": [
+    {
+      "type": "quote",
+      "label": "The post",
+      "heading": "Wed 2:46am ET",
+      "data": {
+        "text": "Going forward, @SpaceX will use the best back end model for any given task, including Claude Opus 5.5, MidJourney, Suno and other leading APIs.",
+        "who": "@elonmusk \u00b7 ~66M views"
+      },
+      "caption": "Musk said Grok Bot will route to rival models: going forward, SpaceX will use the best back end model for any given task, including Claude Opus 5.5, MidJourney, Suno and other leading APIs.",
+      "evidence": [
+        "Musk says Grok Bot will route to rival models (Wed 2:46am ET): \"Going forward, @SpaceX will use the best back end model for any given task, including Claude Opus 5.5, MidJourney, Suno and other leading APIs.\""
+      ],
+      "narration": "Musk said Grok Bot will route to rival models. Going forward, SpaceX will use the best back end model for any given task, including Claude Opus 5.5, Mid Journey, Suno and other leading A P Is."
+    },
+    {
+      "type": "cards",
+      "label": "Named backends",
+      "heading": "What he listed",
+      "data": {
+        "cards": [
+          {
+            "big": "Claude",
+            "label": "Opus 5.5"
+          },
+          {
+            "big": "MidJourney",
+            "label": "image APIs",
+            "alt": true
+          },
+          {
+            "big": "Suno",
+            "label": "audio APIs"
+          }
+        ]
+      },
+      "caption": "He named Claude Opus 5.5, MidJourney, Suno and other leading APIs. He gave no routing rules, pricing or data-handling details.",
+      "evidence": [
+        "Going forward, @SpaceX will use the best back end model for any given task, including Claude Opus 5.5, MidJourney, Suno and other leading APIs.",
+        "He gave no routing rules, pricing or data-handling details."
+      ]
+    },
+    {
+      "type": "kinetic",
+      "label": "Routing hint",
+      "heading": "Small models + Grok 4.8",
+      "data": {
+        "lines": [
+          "Simple requests \u2192 *small fast models*.",
+          "Most @Bot requests \u2192 lightning-fast *Grok 4.8* when it ships."
+        ],
+        "size": 48
+      },
+      "caption": "Through the day he said simple requests will go to small fast models, and most Bot requests will be handled by a lightning-fast version of Grok 4.8 when that comes out.",
+      "evidence": [
+        "Through the day he said simple requests will go to small fast models, \"most @Bot requests\u2026 will be handled by a lightning-fast version of **Grok 4.8** when that comes out\""
+      ],
+      "narration": "Through the day he said simple requests will go to small fast models, and most Bot requests will be handled by a lightning-fast version of Grok 4.8 when that comes out."
+    },
+    {
+      "type": "timeline",
+      "label": "Changelog",
+      "heading": "Past v0.66.0",
+      "data": {
+        "events": [
+          {
+            "date": "OCT 2",
+            "label": "Connect Apps rename + Google account cards",
+            "status": "done"
+          },
+          {
+            "date": "OCT 5",
+            "label": "v0.68.0 \u2014 send-as drafts, routine right-click",
+            "status": "done"
+          },
+          {
+            "date": "OCT 7",
+            "label": "v0.68.1 \u2014 slides, HTML email, faster computer",
+            "status": "next"
+          }
+        ]
+      },
+      "caption": "The Grok Bot changelog moved past v0.66.0 with an October 2 update, v0.68.0 on October 5, and v0.68.1 on October 7.",
+      "evidence": [
+        "Grok Bot changelog moved past v0.66.0. There are three entries after it: an Oct 2 update, **v0.68.0 (Oct 5)** and **v0.68.1 (Oct 7)**."
+      ],
+      "narration": "The Grok Bot changelog moved past version 0.66.0 with an October 2 update, version 0.68.0 on October 5, and version 0.68.1 on October 7."
+    },
+    {
+      "type": "kinetic",
+      "label": "v0.68.1 highlights",
+      "heading": "What shipped October 7",
+      "data": {
+        "lines": [
+          "Slide decks as *PowerPoint* or *Google Slides*.",
+          "Formatted *HTML emails* from a draft card.",
+          "Bot computer screen now *1920\u00d71200*."
+        ],
+        "size": 46
+      },
+      "caption": "In v0.68.1, bots can build slide decks as PowerPoint or Google Slides, send formatted HTML emails from a draft card, and the bot computer screen is now 1920 by 1200.",
+      "evidence": [
+        "Bots can build slide decks and deliver them as PowerPoint or Google Slides.",
+        "Bots can send formatted HTML emails from a draft card.",
+        "The bot computer is faster and its screen is now 1920\u00d71200."
+      ],
+      "narration": "In version 0.68.1, bots can build slide decks as PowerPoint or Google Slides, send formatted HTML emails from a draft card, and the bot computer screen is now 1920 by 1200."
+    }
+  ],
+  "sources": [
+    {
+      "label": "Elon Musk post (X)",
+      "url": "https://x.com/elonmusk/status/2107724314451878104"
+    },
+    {
+      "label": "City AM: Musk turns to rival Anthropic to power Grok",
+      "url": "https://www.cityam.com/musk-turns-to-rival-anthropic-to-power-grok/"
+    },
+    {
+      "label": "TNW: Grok Bot Claude Opus MidJourney Suno",
+      "url": "https://thenextweb.com/news/grok-bot-claude-opus-midjourney-suno-musk"
+    },
+    {
+      "label": "xAI Grok Bot changelog",
+      "url": "https://x.ai/bot/changelog"
+    }
+  ],
+  "music": "pad"
+}

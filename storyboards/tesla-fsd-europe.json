@@ -1,0 +1,142 @@
+{
+  "id": "tesla-fsd-europe-oct-6",
+  "title": "Tesla FSD in Europe: Germany is on board, the EU waits",
+  "kicker": "Tesla · Oct 6, 2026",
+  "subtitle": "What Germany agreed with Tesla, what the EU did not decide, and what happens next.",
+  "title_narration": "Tesla F.S.D. in Europe. Germany is on board. The E.U. waits.",
+  "theme": "tesla",
+  "seed": 71,
+  "length_scale": 0.93,
+  "end_seconds": 6.5,
+  "source_files": [
+    "/workspace/ij_2026-10-06_research.md"
+  ],
+  "as_of": "Grounded in Jim's Interest Journal research for Tue Oct 6, 2026. Regulatory status may change; the EU decision is expected in December.",
+  "scenes": [
+    {
+      "type": "kinetic",
+      "label": "Tuesday, Oct 6",
+      "heading": "Germany backs *EU approval* of FSD",
+      "data": {
+        "lines": [
+          "The EU committee met, with *no vote*.",
+          "A decision is now expected in *December*."
+        ],
+        "size": 66
+      },
+      "caption": "Germany now backs EU approval of Tesla's FSD. The EU committee met with no vote, and a decision is now expected in December.",
+      "evidence": [
+        "FSD in Europe: Germany backs EU approval; the EU committee met with no vote, and a decision is now expected in December."
+      ]
+    },
+    {
+      "type": "cards",
+      "label": "The German deal",
+      "heading": "Agreed with Tesla in September",
+      "data": {
+        "cards": [
+          {
+            "big": "10%",
+            "label": "the most FSD may exceed the speed limit"
+          },
+          {
+            "big": "100%",
+            "label": "responsible: the driver, per the ministry",
+            "alt": true
+          }
+        ]
+      },
+      "caption": "Germany's transport ministry said it reached agreement with Tesla in September. FSD may exceed the speed limit by at most 10%, and the driver stays 100 percent responsible.",
+      "evidence": [
+        "Germany's transport ministry said Tuesday it reached agreement with Tesla in September.",
+        "FSD may exceed the speed limit by at most 10%, and the driver stays \"100 percent responsible.\""
+      ]
+    },
+    {
+      "type": "quote",
+      "label": "A new name for Europe?",
+      "data": {
+        "text": "Tesla *Assisted* Driving",
+        "who": "the name the ministry says Tesla offered; Tesla hasn't announced it",
+        "size": 96
+      },
+      "caption": "The ministry also said Tesla offered to rename the system Tesla Assisted Driving in Europe. Tesla hasn't announced that.",
+      "evidence": [
+        "The ministry also said Tesla offered to rename the system \"Tesla Assisted Driving\" in Europe; Tesla hasn't announced that."
+      ]
+    },
+    {
+      "type": "flow",
+      "label": "Two paths",
+      "heading": "How FSD could reach German roads",
+      "data": {
+        "steps": [
+          {
+            "title": "EU committee",
+            "sub": "met with no vote"
+          },
+          {
+            "title": "December",
+            "sub": "EU decision now expected"
+          },
+          {
+            "title": "Plan B",
+            "sub": "Bilger would consider a German-only route if the EU fails"
+          }
+        ],
+        "note": "For now, the ministry's statement commits only to the EU process."
+      },
+      "caption": "Minister Bilger said he'd consider a German-only route if the EU fails. But the ministry's written statement commits only to the EU process, and doesn't approve FSD in Germany.",
+      "evidence": [
+        "Minister Bilger said earlier Tuesday he'd consider a German-only route if the EU fails.",
+        "The ministry's written statement commits only to the EU process and doesn't approve FSD in Germany."
+      ]
+    },
+    {
+      "type": "bignumber",
+      "label": "Where it stands",
+      "heading": "Already legal in part of Europe",
+      "data": {
+        "value": 8,
+        "display": "8",
+        "pre": "FSD Supervised",
+        "label": "EU countries where it's legal now",
+        "compare": [
+          {
+            "big": "$380.68",
+            "label": "TSLA close on Tuesday"
+          },
+          {
+            "big": "Oct 21",
+            "label": "Q3 earnings, after the close"
+          }
+        ]
+      },
+      "caption": "FSD Supervised is legal in 8 EU countries now. Meanwhile, TSLA closed at $380.68, and Q3 earnings are still October 21 after the close.",
+      "evidence": [
+        "FSD Supervised is legal in 8 EU countries now.",
+        "TSLA closed at $380.68",
+        "Q3 earnings are still Oct 21 after the close."
+      ]
+    }
+  ],
+  "sources": [
+    {
+      "label": "eletric-vehicles.com: Tesla reached deal with Germany on FSD",
+      "url": "https://eletric-vehicles.com/tesla/tesla-reached-deal-with-germany-on-fsd-speed-and-liability-ministry-says/"
+    },
+    {
+      "label": "NotATeslaKiller: EU committee, no vote; Bilger",
+      "url": "https://notateslakiller.com/en/tesla-fsd-tcmv-oct-6-no-vote-germany-bilger/"
+    },
+    {
+      "label": "Exa: TSLA quote, Oct 6",
+      "url": "https://exa.ai/library/markets/stock/TSLA?date=2026-10-06"
+    },
+    {
+      "label": "Nexqual: TSLA",
+      "url": "https://nexqual.com/TSLA"
+    }
+  ],
+  "music": "pad"
+}

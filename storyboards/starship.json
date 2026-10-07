@@ -1,0 +1,207 @@
+{
+  "id": "starship-flight-14-to-orbit",
+  "title": "Starship reaches orbit, and what comes next",
+  "kicker": "SpaceX · Starship · Sep 28 – Oct 6, 2026",
+  "subtitle": "Flight 14's first orbital trip, its new Starlink payload, and the road to Flight 15.",
+  "title_narration": "Starship reaches orbit. And what comes next.",
+  "theme": "space",
+  "seed": 21,
+  "length_scale": 0.93,
+  "end_seconds": 6.5,
+  "source_files": [
+    "/workspace/ij_2026-09-28_research.md",
+    "/workspace/ij_2026-09-29_research.md",
+    "/workspace/ij_2026-10-05_research.md",
+    "/workspace/ij_2026-10-06_research.md"
+  ],
+  "as_of": "Grounded in Jim's Interest Journal research for Sep 28, Sep 29, Oct 5 and Oct 6, 2026. Flight 15 timing is unofficial.",
+  "scenes": [
+    {
+      "type": "trajectory",
+      "label": "Sep 28 · Flight 14",
+      "heading": "The first Starship flight to reach *orbit*",
+      "data": {
+        "events": [
+          {
+            "time": "8:49 A.M. EDT",
+            "label": "Liftoff, Starbase Pad 2",
+            "at": 0.0
+          },
+          {
+            "label": "One of six ship Raptors shuts down early",
+            "at": 0.24,
+            "alt": true
+          },
+          {
+            "label": "First-ever orbital insertion burn",
+            "at": 0.46
+          },
+          {
+            "label": "26 Starlink V3 deployed",
+            "at": 0.7
+          },
+          {
+            "time": "11:57 A.M. EDT",
+            "label": "Splashdown north of Hawaii",
+            "at": 1.0,
+            "alt": true
+          }
+        ]
+      },
+      "caption": "On September 28, Starship Flight 14 lifted off from Starbase at 8:49 a.m. EDT, and became the first Starship flight to reach low Earth orbit, after 13 suborbital flights.",
+      "evidence": [
+        "Liftoff **Mon Sep 28, 8:49 a.m. EDT**",
+        "First Starship flight to reach **low Earth orbit** after 13 suborbital flights",
+        "One of Ship’s six Raptors shut down early on ascent",
+        "first-ever orbital insertion burn"
+      ]
+    },
+    {
+      "type": "cards",
+      "label": "The payload",
+      "heading": "Next-gen Starlinks, too big for Falcon 9",
+      "data": {
+        "cards": [
+          {
+            "big": "26",
+            "label": "Starlink V3 satellites deployed"
+          },
+          {
+            "big": "~2 t",
+            "label": "each, too large for a Falcon 9 fairing"
+          },
+          {
+            "big": "~1 Tbps",
+            "label": "capacity each (SpaceX claim)",
+            "alt": true
+          }
+        ]
+      },
+      "caption": "It deployed 26 Starlink V3 satellites, each about 2 tonnes and too large for a Falcon 9 fairing. SpaceX claims about 1 Tbps of capacity each.",
+      "evidence": [
+        "Deployed **26 Starlink V3** satellites",
+        "too large for Falcon 9 fairing; ~2 t each; ~**1 Tbps** capacity each"
+      ]
+    },
+    {
+      "type": "bars",
+      "label": "Cut short on purpose",
+      "heading": "Planned 10 hours, flew about 3",
+      "data": {
+        "suffix": " h",
+        "max": 10,
+        "items": [
+          {
+            "label": "Planned mission",
+            "value": 10,
+            "display": "~10 h · ~6 orbits"
+          },
+          {
+            "label": "Actual flight",
+            "value": 3,
+            "display": "~3 h",
+            "highlight": true
+          }
+        ],
+        "note": "FAA: no formal mishap investigation"
+      },
+      "caption": "The plan was about 10 hours and 6 orbits. Out of caution after the engine issue, the ship came down north of Hawaii about 3 hours after liftoff.",
+      "evidence": [
+        "Planned ~**10 h / ~6 orbits**",
+        "out of an abundance of caution",
+        "splashdown **11:57 a.m. EDT** (~3 h after liftoff)",
+        "no formal mishap investigation"
+      ]
+    },
+    {
+      "type": "cards",
+      "label": "Fueling the Cape",
+      "heading": "SpaceX wants a methane pipeline",
+      "data": {
+        "cards": [
+          {
+            "big": "32.4 mi",
+            "label": "natural gas pipeline proposed in Brevard County"
+          },
+          {
+            "big": "16-inch",
+            "label": "line to fuel Starship from Cape Canaveral"
+          },
+          {
+            "big": "8 mi",
+            "label": "similar line requested for Boca Chica",
+            "alt": true
+          }
+        ]
+      },
+      "caption": "To fuel Starship at Cape Canaveral, a SpaceX subsidiary wants a 32.4-mile, 16-inch natural gas pipeline, because trucked gas can't keep up. A similar 8-mile line is requested for Boca Chica.",
+      "evidence": [
+        "seeking approval for a 32.4-mile, 16-inch natural gas pipeline in Brevard County",
+        "because trucked gas can't keep up",
+        "A similar 8-mile line has been requested for Boca Chica"
+      ]
+    },
+    {
+      "type": "timeline",
+      "label": "What's next",
+      "heading": "The road to a ship *catch*",
+      "data": {
+        "events": [
+          {
+            "date": "SEP 28",
+            "label": "Flight 14 reaches orbit",
+            "status": "done"
+          },
+          {
+            "date": "OCT 5",
+            "label": "Morgan Stanley: a catch could be the biggest catalyst since the IPO",
+            "status": "done"
+          },
+          {
+            "date": "NET OCT 19?",
+            "label": "Flight 15: unofficial, no official date",
+            "status": "next"
+          },
+          {
+            "date": "AHEAD",
+            "label": "Ship catch and orbital refueling demo",
+            "status": "tbd"
+          }
+        ]
+      },
+      "caption": "Morgan Stanley says a ship catch on the next flight could be the biggest positive catalyst since the IPO. For Flight 15, the unofficial NET Oct 19 still stands.",
+      "evidence": [
+        "a Starship ship catch on the next flight could be \"the biggest positive catalyst since the IPO.\"",
+        "There's still no official date. The unofficial NET Oct 19 still stands.",
+        "Still ahead: orbital refueling demo + Ship RTLS/catch."
+      ]
+    }
+  ],
+  "sources": [
+    {
+      "label": "Spaceflight Now: Starship splashes down north of Hawaii",
+      "url": "https://spaceflightnow.com/2026/09/28/starship-returns-to-earth-rocket-splashes-down-north-of-hawaii-after-three-hour-flight/"
+    },
+    {
+      "label": "Ars Technica: Starship's first orbital launch",
+      "url": "https://arstechnica.com/space/2026/09/starships-first-orbital-launch-gives-lift-to-spacexs-next-gen-starlinks/"
+    },
+    {
+      "label": "SpaceX: Starship Flight 14",
+      "url": "https://www.spacex.com/launches/starship-flight-14"
+    },
+    {
+      "label": "Reuters: SpaceX seeks Florida gas pipeline",
+      "url": "https://www.reuters.com/business/energy/spacex-seeks-approval-florida-gas-pipeline-support-cape-canaveral-launches-2026-10-05/"
+    },
+    {
+      "label": "CNBC: SpaceX stock climbs (Morgan Stanley note)",
+      "url": "https://www.cnbc.com/2026/10/05/spacex-stock-climbs-highest-since-june-returning-musk-to-trillionaire.html"
+    },
+    {
+      "label": "Spike Today: Starship Flight 15 launch date",
+      "url": "https://spiketoday.com/starship-flight-15-launch-date/"
+    }
+  ],
+  "music": "pad"
+}

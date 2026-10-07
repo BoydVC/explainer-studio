@@ -1,0 +1,128 @@
+{
+  "id": "harvey-lexis-mtd-oct-7",
+  "title": "Harvey + LexisNexis: Motion to Dismiss agent",
+  "kicker": "Agents \u00b7 Oct 7, 2026",
+  "subtitle": "Four-step agentic litigation drafting with a human approval gate \u2014 a pattern for law-firm workflows.",
+  "title_narration": "Harvey plus Lexis Nexis. A Motion to Dismiss drafting agent.",
+  "theme": "agents",
+  "seed": 71,
+  "length_scale": 0.95,
+  "end_seconds": 6.5,
+  "topic": "agents",
+  "source_files": [
+    "/workspace/ij_2026-10-07_research.md",
+    "/workspace/ij_2026-10-07_content.md"
+  ],
+  "as_of": "Grounded in Jim's Interest Journal research and content notes for Wed Oct 7, 2026. Vendor product claims; not a KPD endorsement.",
+  "scenes": [
+    {
+      "type": "kinetic",
+      "label": "The launch",
+      "heading": "Motion to Dismiss drafting agent",
+      "data": {
+        "lines": [
+          "Harvey + *LexisNexis*, announced *Oct 7*.",
+          "Agentic litigation drafting with *human approval*."
+        ],
+        "size": 52
+      },
+      "caption": "Harvey and LexisNexis launched a Motion to Dismiss drafting agent on October 7.",
+      "evidence": [
+        "Harvey + LexisNexis: Motion to Dismiss drafting agent (Oct 7)."
+      ]
+    },
+    {
+      "type": "flow",
+      "label": "Four steps",
+      "heading": "How the workflow runs",
+      "data": {
+        "steps": [
+          {
+            "title": "Plan",
+            "sub": "ranks dismissal grounds from the complaint"
+          },
+          {
+            "title": "Approve",
+            "sub": "a lawyer signs off"
+          },
+          {
+            "title": "Research",
+            "sub": "parallel Lexis searches, Shepard's cites"
+          },
+          {
+            "title": "Draft",
+            "sub": "writes the motion + table of authorities"
+          }
+        ]
+      },
+      "caption": "It works in four steps: a planning agent ranks dismissal grounds from the complaint, a lawyer approves, parallel research agents run Lexis searches with Shepard's-validated cites, and a drafting agent writes the motion.",
+      "evidence": [
+        "It works in four steps: a planning agent ranks dismissal grounds from the complaint, a lawyer approves, parallel research agents run Lexis searches with Shepard's-validated cites, and a drafting agent writes the motion."
+      ],
+      "narration": "It works in four steps: a planning agent ranks dismissal grounds from the complaint, a lawyer approves, parallel research agents run Lexis searches with Shepard's-validated cites, and a drafting agent writes the motion."
+    },
+    {
+      "type": "cards",
+      "label": "Output",
+      "heading": "Forum-correct vehicles",
+      "data": {
+        "cards": [
+          {
+            "big": "12(b)(6)",
+            "label": "federal motion to dismiss"
+          },
+          {
+            "big": "Demurrer",
+            "label": "state-court vehicle",
+            "alt": true
+          },
+          {
+            "big": "CPLR 3211",
+            "label": "New York dismissal"
+          }
+        ]
+      },
+      "caption": "It produces a forum-correct vehicle \u2014 12(b)(6), demurrer, or CPLR 3211 \u2014 with a table of authorities.",
+      "evidence": [
+        "It produces a forum-correct vehicle (12(b)(6), demurrer, CPLR 3211) with a table of authorities."
+      ],
+      "narration": "It produces a forum-correct vehicle \u2014 twelve B six, demurrer, or C P L R three two one one \u2014 with a table of authorities."
+    },
+    {
+      "type": "kinetic",
+      "label": "Who gets it",
+      "heading": "Available to Harvey customers",
+      "data": {
+        "lines": [
+          "Needs *Ask LexisNexis* or *Lexis+ Prot\u00e9g\u00e9*.",
+          "Next up: *Motion for Summary Judgment*."
+        ],
+        "size": 50
+      },
+      "caption": "It's available to Harvey customers with Ask LexisNexis or Lexis+ Prot\u00e9g\u00e9. A Motion for Summary Judgment workflow is next.",
+      "evidence": [
+        "A Motion for Summary Judgment workflow is next. It's available to Harvey customers with Ask LexisNexis or Lexis+ Prot\u00e9g\u00e9."
+      ]
+    },
+    {
+      "type": "quote",
+      "label": "Why it matters",
+      "heading": "Law-firm angle",
+      "data": {
+        "text": "the clearest real-world example yet of agentic litigation drafting with human approval steps",
+        "who": "Jim's Interest Journal \u00b7 Oct 7"
+      },
+      "caption": "The journal calls it the clearest real-world example yet of agentic litigation drafting with human approval steps; good as a pattern for in-house KPD workflows.",
+      "evidence": [
+        "Law-firm angle: the clearest real-world example yet of agentic litigation drafting with human approval steps; good as a pattern for in-house KPD workflows."
+      ]
+    }
+  ],
+  "sources": [
+    {
+      "label": "Harvey: Motion to Dismiss workflow with LexisNexis",
+      "url": "https://www.harvey.ai/blog/motion-to-dismiss-workflow-lexisnexis"
+    }
+  ],
+  "music": "pad"
+}

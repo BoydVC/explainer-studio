@@ -1,0 +1,151 @@
+{
+  "id": "spacexai-to-spacexsi-rename",
+  "title": "SpaceXAI to SpaceXSI: the rename that hasn't happened yet",
+  "kicker": "SpaceXAI / xAI · Oct 4–6, 2026",
+  "subtitle": "Three short posts, one promise, and three days of no visible change.",
+  "title_narration": "SpaceX A.I. to SpaceX S.I. The rename that hasn't happened yet.",
+  "theme": "agents",
+  "seed": 51,
+  "length_scale": 0.93,
+  "end_seconds": 6.5,
+  "source_files": [
+    "/workspace/ij_2026-10-04_research.md",
+    "/workspace/ij_2026-10-05_research.md",
+    "/workspace/ij_2026-10-06_research.md"
+  ],
+  "as_of": "Grounded in Jim's Interest Journal research for Oct 4, 5 and 6, 2026.",
+  "scenes": [
+    {
+      "type": "kinetic",
+      "label": "Sunday, Oct 4",
+      "heading": "Three posts from Elon Musk",
+      "data": {
+        "lines": [
+          "*\"No more AI.\"*",
+          "*\"SI.\"*",
+          "*\"It's better.\"*"
+        ],
+        "size": 84
+      },
+      "caption": "Early Sunday, Musk posted: No more AI. Then: SI. And: It's better.",
+      "evidence": [
+        "Early Sunday Musk posted \"No more AI,\" then \"SI\" and \"It's better.\""
+      ]
+    },
+    {
+      "type": "quote",
+      "label": "The promise",
+      "data": {
+        "text": "Yes, we will make *that change.*",
+        "who": "Elon Musk, asked if SpaceXAI would become SpaceXSI",
+        "size": 84
+      },
+      "caption": "Asked whether SpaceXAI would be renamed SpaceXSI, he replied: Yes, we will make that change. He gave no timeline, and didn't say whether it's a legal or branding change.",
+      "evidence": [
+        "Asked whether SpaceXAI would be renamed SpaceXSI, he replied \"Yes, we will make that change.\" He gave no timeline and didn't say whether it's a legal or branding change."
+      ]
+    },
+    {
+      "type": "kinetic",
+      "label": "Why now",
+      "heading": "Following Washington's lead",
+      "data": {
+        "lines": [
+          "The move follows Trump's push for *\"super intelligence\"* over \"AI.\"",
+          "Euronews: Trump announced a *\"Super Intelligence Force\"* on Sunday."
+        ],
+        "size": 56
+      },
+      "caption": "The move follows Trump's push for super intelligence over AI. Euronews adds that Trump announced a Super Intelligence Force on Sunday.",
+      "evidence": [
+        "The move follows Trump's push for \"super intelligence\" over \"AI.\"",
+        "Euronews adds that Trump announced a \"Super Intelligence Force\" on Sunday."
+      ]
+    },
+    {
+      "type": "timeline",
+      "label": "Rename tracker",
+      "heading": "Promised Sunday. Still not done.",
+      "data": {
+        "events": [
+          {
+            "date": "SUN OCT 4",
+            "label": "\"Yes, we will make that change\"",
+            "status": "done"
+          },
+          {
+            "date": "MON OCT 5",
+            "label": "Websites and social accounts unchanged",
+            "status": "done"
+          },
+          {
+            "date": "TUE OCT 6",
+            "label": "x.ai still says \"AI\" throughout",
+            "status": "done"
+          },
+          {
+            "date": "TBD",
+            "label": "No formal announcement or timeline",
+            "status": "tbd"
+          }
+        ]
+      },
+      "caption": "On Monday, Euronews said the company's websites and social accounts hadn't changed. By Tuesday, Tom's Hardware and TechRepublic said x.ai still uses AI and Artificial Intelligence throughout, with no formal announcement or timeline.",
+      "evidence": [
+        "Euronews (6:42 a.m. ET) said the company's websites and social accounts hadn't changed.",
+        "On Tuesday, Tom's Hardware and TechRepublic said the x.ai site still uses \"AI\" and \"Artificial Intelligence\" throughout.",
+        "there's no formal announcement or timeline"
+      ]
+    },
+    {
+      "type": "cards",
+      "label": "Meanwhile at x.ai",
+      "heading": "Quiet on the official channels",
+      "data": {
+        "cards": [
+          {
+            "big": "Sept 28",
+            "label": "newest post on x.ai/news"
+          },
+          {
+            "big": "v0.66.0",
+            "label": "newest Grok Bot changelog entry (Oct 2)",
+            "alt": true
+          }
+        ]
+      },
+      "caption": "Meanwhile, x.ai/news has no post newer than Sept 28, and the newest Grok Bot changelog entry is still v0.66.0 from Oct 2.",
+      "evidence": [
+        "has no post newer than Sept 28",
+        "The Grok Bot changelog's newest entry is still v0.66.0 (Oct 2)"
+      ]
+    }
+  ],
+  "sources": [
+    {
+      "label": "Reuters via Daily Maverick: Musk says he will rename SpaceXAI",
+      "url": "https://www.dailymaverick.co.za/article/2026-10-04-musk-says-he-will-rename-spacexai-to-spacexsi/"
+    },
+    {
+      "label": "Teslarati: a SpaceX name change is coming",
+      "url": "https://www.teslarati.com/elon-musk-follows-trumps-lead-says-a-spacex-name-change-is-coming/"
+    },
+    {
+      "label": "Euronews: Musk to rebrand SpaceXAI as SpaceXSI",
+      "url": "https://www.euronews.com/2026/10/05/musk-to-follow-trump-and-rebrand-spacexai-as-spacexsi"
+    },
+    {
+      "label": "Tom's Hardware: SpaceXSI rebrand pledge",
+      "url": "https://www.tomshardware.com/tech-industry/artificial-intelligence/elon-musk-pledges-spacexsi-rebrand-after-trumps-executive-order-to-use-super-intelligence-moniker-president-trump-has-signed-the-executive-order-to-replace-artificial-intelligence"
+    },
+    {
+      "label": "TechRepublic: Musk SpaceXSI rebrand",
+      "url": "https://www.techrepublic.com/article/news-musk-spacexsi-rebrand-super-intelligence/"
+    },
+    {
+      "label": "x.ai/news and the Grok Bot changelog",
+      "url": "https://x.ai/changelog/bot"
+    }
+  ],
+  "music": "pad"
+}

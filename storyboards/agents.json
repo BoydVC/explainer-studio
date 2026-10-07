@@ -1,0 +1,182 @@
+{
+  "id": "agents-go-to-work-oct-6",
+  "title": "Agents go to work: Oct 6 in agent tooling",
+  "kicker": "Agent tooling · Oct 6, 2026",
+  "subtitle": "Claude in Google Docs, OpenAI's contracting agents, a 10x-faster decisions API, and a tip for your bot fleet.",
+  "title_narration": "Agents go to work. October 6 in agent tooling.",
+  "theme": "agents",
+  "seed": 31,
+  "length_scale": 0.93,
+  "end_seconds": 6.5,
+  "source_files": [
+    "/workspace/ij_2026-10-06_research.md",
+    "/workspace/ij_2026-10-06_content.md",
+    "/workspace/ij_2026-10-06_x.md"
+  ],
+  "as_of": "Grounded in Jim's Interest Journal for Oct 6, 2026 (research, content and X notes). Benchmarks are vendor-reported.",
+  "scenes": [
+    {
+      "type": "flow",
+      "label": "Public beta",
+      "heading": "Claude for Google Workspace",
+      "data": {
+        "steps": [
+          {
+            "title": "Docs · Sheets · Slides",
+            "sub": "sidebar add-on on all paid Claude plans"
+          },
+          {
+            "title": "Reads",
+            "sub": "the open file and your selection"
+          },
+          {
+            "title": "Ask before edits",
+            "sub": "the default, with per-change approval cards"
+          },
+          {
+            "title": "Edits in place",
+            "sub": "formulas, pivots, charts; the deck's own layouts"
+          }
+        ]
+      },
+      "caption": "Claude for Google Workspace is in public beta. It's a sidebar for Docs, Sheets and Slides that reads the open file and your selection and edits in place. The default mode is Ask before edits, with per-change approval cards.",
+      "evidence": [
+        "It's a sidebar add-on for Docs, Sheets and Slides on all paid Claude plans",
+        "It reads the open file and your selection and edits in place",
+        "The default mode is \"Ask before edits,\" with per-change approval cards"
+      ]
+    },
+    {
+      "type": "bars",
+      "label": "OpenAI + Ironclad",
+      "heading": "Computer-use agents trained on contracting work",
+      "data": {
+        "suffix": "%",
+        "decimals": 1,
+        "max": 70,
+        "items": [
+          {
+            "label": "Internal model",
+            "value": 63.7,
+            "display": "63.7%"
+          },
+          {
+            "label": "GPT-6 Astra",
+            "value": 55.0,
+            "display": "55.0%",
+            "highlight": true
+          },
+          {
+            "label": "GPT-5.6 Sol",
+            "value": 41.6,
+            "display": "41.6%"
+          }
+        ],
+        "note": "Research eval: 11 legal, commercial and procurement tasks"
+      },
+      "caption": "OpenAI and Ironclad trained computer-use agents on 11 contracting tasks. On that research eval, GPT-6 Astra scored 55.0%, versus 41.6% for GPT-5.6 Sol. An internal model hit 63.7%.",
+      "evidence": [
+        "Ironclad helped define 11 legal, commercial and procurement tasks, such as NDA setup, approval routing",
+        "On that research eval GPT-6 Astra scored 55.0% vs 41.6% for GPT-5.6 Sol",
+        "An internal model hit 63.7%."
+      ]
+    },
+    {
+      "type": "bars",
+      "label": "Speed",
+      "heading": "Time per attempt, *about halved*",
+      "data": {
+        "suffix": " min",
+        "decimals": 1,
+        "max": 40,
+        "items": [
+          {
+            "label": "Before",
+            "value": 37.0,
+            "display": "37.0 min"
+          },
+          {
+            "label": "Now",
+            "value": 19.2,
+            "display": "19.2 min",
+            "highlight": true
+          }
+        ],
+        "note": "Jim's note: the closest yet to law-firm ops"
+      },
+      "caption": "Estimated time per attempt fell from 37.0 to 19.2 minutes. Jim called it the closest yet to law-firm ops.",
+      "evidence": [
+        "estimated time per attempt fell from 37.0 to 19.2 minutes",
+        "That's the closest yet to law-firm ops."
+      ]
+    },
+    {
+      "type": "cards",
+      "label": "OpenAI Decisions API",
+      "heading": "Typed answers for routing agents",
+      "data": {
+        "cards": [
+          {
+            "big": "3",
+            "label": "answer types: predicate, choice, score"
+          },
+          {
+            "big": "~10x",
+            "label": "faster than the Responses API, per OpenAI"
+          },
+          {
+            "big": "$0.10",
+            "label": "per 1M input tokens; output is free",
+            "alt": true
+          }
+        ]
+      },
+      "caption": "OpenAI's Decisions API, now in public beta, returns typed answers: a predicate, a choice or a score. OpenAI says it's about 10x faster than the Responses API.",
+      "evidence": [
+        "OpenAI Decisions API is now public beta",
+        "There are three answer types: predicate (a 0–1 probability), choice (with per-option probabilities) and score",
+        "OpenAI says it's about 10x faster than the Responses API, which suits routing, classification or picking an agent's next action",
+        "Pricing is $0.10 per 1M input tokens, and output is free"
+      ]
+    },
+    {
+      "type": "kinetic",
+      "label": "For your bot fleet",
+      "heading": "A bookmarked tip from @benln",
+      "data": {
+        "lines": [
+          "Have your main Grok Bot read the new *x.ai/bot/guides*",
+          "and recommend *best practices* for your Bots."
+        ],
+        "size": 60
+      },
+      "caption": "And a tip you bookmarked from Ben Lang: have your main Grok Bot read the new x.ai/bot/guides and recommend best practices for your Bots.",
+      "evidence": [
+        "tip to have your main Grok Bot read the new x.ai/bot/guides and recommend best practices for your Bots"
+      ]
+    }
+  ],
+  "sources": [
+    {
+      "label": "Claude: Claude now works in Docs, Sheets and Slides",
+      "url": "https://claude.com/resources/articles/claude-now-works-in-google-docs-sheets-and-slides"
+    },
+    {
+      "label": "9to5Google: Claude for Google Docs, Sheets, Slides",
+      "url": "https://9to5google.com/2026/10/06/claude-google-docs-sheet-slides/"
+    },
+    {
+      "label": "OpenAI: Advancing computer use with Ironclad",
+      "url": "https://openai.com/index/advancing-computer-use-with-ironclad/"
+    },
+    {
+      "label": "Unite.AI: OpenAI Decisions API public beta",
+      "url": "https://www.unite.ai/openai-releases-decisions-api-in-public-beta-powered-by-gpt-6-luna/"
+    },
+    {
+      "label": "@benln on X: Grok Bot guides tip",
+      "url": "https://x.com/benln/status/2107472129960575369"
+    }
+  ],
+  "music": "pad"
+}

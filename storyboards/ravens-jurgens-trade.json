@@ -1,0 +1,151 @@
+{
+  "id": "ravens-jurgens-trade-oct-7",
+  "title": "Ravens land Cam Jurgens: the biggest trade since Roquan",
+  "kicker": "Ravens \u00b7 Oct 7, 2026",
+  "subtitle": "A Pro Bowl center from Philly, an unconventional Lamar sprain, and Sunday night at Atlanta.",
+  "title_narration": "Ravens land Cam Jurgens. The biggest trade since Roquan.",
+  "theme": "ravens",
+  "seed": 47,
+  "length_scale": 0.95,
+  "end_seconds": 6.5,
+  "topic": "ravens",
+  "source_files": [
+    "/workspace/ij_2026-10-07_research.md"
+  ],
+  "as_of": "Grounded in Jim's Interest Journal research for Wed Oct 7, 2026. Injury and line status change fast; check before Sunday.",
+  "scenes": [
+    {
+      "type": "kinetic",
+      "label": "The deal",
+      "heading": "Ravens acquire C *Cam Jurgens* from the Eagles",
+      "data": {
+        "lines": [
+          "Biggest Ravens trade since *Roquan Smith*.",
+          "Reported Wednesday around *1pm ET*."
+        ],
+        "size": 58
+      },
+      "caption": "The Ravens acquire center Cam Jurgens from the Eagles. It's the biggest Ravens trade since Roquan Smith.",
+      "evidence": [
+        "Trade: Ravens acquire C Cam Jurgens from the Eagles (Wed ~1pm ET).",
+        "It's the biggest Ravens trade since Roquan Smith."
+      ]
+    },
+    {
+      "type": "cards",
+      "label": "The haul",
+      "heading": "What each side gave up",
+      "data": {
+        "cards": [
+          {
+            "big": "Give",
+            "label": "2027 5th + 2028 2nd"
+          },
+          {
+            "big": "Get",
+            "label": "Jurgens + 2027 7th",
+            "alt": true
+          },
+          {
+            "big": "$17M",
+            "label": "AAV, under contract through 2029"
+          }
+        ]
+      },
+      "caption": "Baltimore gives up a 2027 fifth-round pick and a 2028 second-round pick, and gets Jurgens plus a 2027 seventh. He's under contract through 2029 at about 17 million AAV.",
+      "evidence": [
+        "Ravens give up** a 2027 5th-round pick and a 2028 2nd-round pick.",
+        "Ravens get** Jurgens and a 2027 7th-round pick.",
+        "under contract through 2029 ($17M AAV)"
+      ],
+      "narration": "Baltimore gives up a 2027 fifth-round pick and a 2028 second-round pick, and gets Jurgens plus a 2027 seventh. He's under contract through 2029 at about 17 million A A V."
+    },
+    {
+      "type": "cards",
+      "label": "The player",
+      "heading": "Two-time Pro Bowler, age *27*",
+      "data": {
+        "cards": [
+          {
+            "big": "Concussion",
+            "label": "protocol \u2014 expected debut next week vs Cleveland",
+            "alt": true
+          },
+          {
+            "big": "OL plan",
+            "label": "Ioane to RG, Simpson at LG"
+          }
+        ]
+      },
+      "caption": "Jurgens is 27 and a two-time Pro Bowler, but he's in concussion protocol. Per Schefter, he's expected to debut next week versus Cleveland, not at Atlanta. The plan moves Ioane back to right guard and Simpson to left guard.",
+      "evidence": [
+        "Jurgens is 27, a two-time Pro Bowler",
+        "He's **in concussion protocol**. Per Schefter, he's expected to debut **next week vs Cleveland**, not at Atlanta.",
+        "Plan: Ioane moves back to RG and Simpson plays LG."
+      ]
+    },
+    {
+      "type": "quote",
+      "label": "Lamar update",
+      "heading": "An \"unconventional\" ankle sprain",
+      "data": {
+        "text": "\"There is a lot of time between now and Sunday\u2026 When he is ready to play, he will be ready to play.\"",
+        "who": "Zach Minter",
+        "size": 52
+      },
+      "caption": "Lamar did not practice Wednesday. Rapoport calls the sprain unconventional: neither a low nor a high ankle sprain. He still has an outside chance for Sunday and could miss multiple games.",
+      "evidence": [
+        "Lamar (ankle): did not practice Wednesday.",
+        "Rapoport calls the sprain **\"unconventional\"**: neither a low nor a high ankle sprain. He still has an \"outside chance\" for Sunday and could miss multiple games.",
+        "Minter: \"There is a lot of time between now and Sunday\u2026 When he is ready to play, he will be ready to play.\""
+      ]
+    },
+    {
+      "type": "cards",
+      "label": "Sunday night",
+      "heading": "Week 5 at Atlanta",
+      "data": {
+        "cards": [
+          {
+            "big": "ATL -3",
+            "label": "consensus line Wednesday"
+          },
+          {
+            "big": "43.5\u201344",
+            "label": "game total"
+          },
+          {
+            "big": "3\u20131",
+            "label": "Ravens into Sunday night",
+            "alt": true
+          }
+        ]
+      },
+      "caption": "No new line move Wednesday. Consensus is still about Atlanta minus 3, with the total around 43.5 to 44. The Ravens are 3 and 1 heading into Sunday night at Atlanta.",
+      "evidence": [
+        "Consensus is still about **ATL -3**, with the total around 43.5\u201344.",
+        "Ravens (3\u20131, at Atlanta, Sun night Oct 11)"
+      ],
+      "narration": "No new line move Wednesday. Consensus is still about Atlanta minus 3, with the total around 43.5 to 44. The Ravens are 3 and 1 heading into Sunday night at Atlanta."
+    }
+  ],
+  "sources": [
+    {
+      "label": "Ravens.com: Cam Jurgens trade",
+      "url": "https://www.baltimoreravens.com/news/ravens-trade-cam-jurgens-center-pro-bowl-injuries-2026"
+    },
+    {
+      "label": "NFL.com: Cam Jurgens Ravens-Eagles trade",
+      "url": "https://www.nfl.com/news/cam-jurgens-ravens-eagles-trade"
+    },
+    {
+      "label": "NBC Sports: Lamar ankle sprain neither low nor high",
+      "url": "https://www.nbcsports.com/fantasy/football/player-news/2026-10-07/lamars-ankle-sprain-neither-low-nor-high"
+    },
+    {
+      "label": "Odds Journal: Falcons now 3-point favorites",
+      "url": "https://www.oddsjournal.io/blog/lamar-jackson-ankle-update-mri-done-falcons-now-3-point-favorites-vs-ravens"
+    }
+  ],
+  "music": "pad"
+}

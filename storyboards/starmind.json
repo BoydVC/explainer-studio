@@ -1,0 +1,179 @@
+{
+  "id": "starmind-1m-ai-satellites",
+  "title": "Starmind: SpaceX's plan for up to 1 million AI satellites",
+  "kicker": "SpaceX \u00b7 Oct 6, 2026",
+  "subtitle": "What SpaceX put in writing, and what it showed at the International Astronautical Congress.",
+  "title_narration": "Starmind. SpaceX's plan for up to one million A.I. satellites.",
+  "theme": "space",
+  "seed": 11,
+  "source_files": [
+    "/workspace/ij_2026-10-06_research.md",
+    "/workspace/ij_2026-10-01_research.md"
+  ],
+  "as_of": "Grounded in Jim's Interest Journal research for Oct 1 and Oct 6, 2026. Concept details are SpaceX's own and may change.",
+  "scenes": [
+    {
+      "type": "dots",
+      "label": "In writing",
+      "heading": "A new SpaceX Space Safety page sets the scale",
+      "data": {
+        "per_dot": 10000,
+        "cols": 20,
+        "groups": [
+          {
+            "big": "100,000",
+            "label": "Starlink satellites (up to)",
+            "value": 100000,
+            "cols": 10
+          },
+          {
+            "big": "1,000,000",
+            "label": "Starmind AI satellites (up to)",
+            "value": 1000000,
+            "alt": true
+          }
+        ],
+        "legend": "DOTS DRAWN TO SCALE"
+      },
+      "caption": "A new SpaceX Space Safety page says it plans to operate up to 100,000 Starlink satellites and up to 1 million Starmind AI satellites.",
+      "evidence": [
+        "plans to operate up to 100,000 Starlink satellites and up to 1 million Starmind AI satellites."
+      ]
+    },
+    {
+      "type": "cluster",
+      "label": "How it computes",
+      "heading": "Compute would run in *clusters*",
+      "data": {
+        "n": 10,
+        "center": "~10 Tbps",
+        "facts": [
+          {
+            "big": "10-ish",
+            "label": "satellites per compute cluster"
+          },
+          {
+            "big": "~10 Tbps",
+            "label": "of links between them"
+          },
+          {
+            "big": "4,000 kg",
+            "label": "possible weight of each satellite"
+          }
+        ]
+      },
+      "caption": "At the International Astronautical Congress, SpaceX's Michael Nicolls said compute would run in clusters of 10-ish satellites, with about 10 Tbps of links between them. Each could weigh up to 4,000 kg.",
+      "evidence": [
+        "compute would run in clusters of \"10-ish satellites\" with about 10 Tbps of links between them",
+        "Each satellite could weigh up to 4,000 kg."
+      ]
+    },
+    {
+      "type": "quote",
+      "label": "The first look",
+      "data": {
+        "text": "A very *notional* concept... probably *wrong.*",
+        "who": "Michael Nicolls, SpaceX, on the first Starmind video"
+      },
+      "caption": "SpaceX also showed the first visual of the constellation. Nicolls called the video a very notional concept, and probably wrong.",
+      "evidence": [
+        "showed the first visual of the constellation",
+        "called the video \"a very notional concept... probably wrong.\""
+      ]
+    },
+    {
+      "type": "cards",
+      "label": "Power",
+      "heading": "Each spacecraft out-powers the space station",
+      "data": {
+        "cards": [
+          {
+            "big": "250kW+",
+            "label": "of solar power on each Star Mind spacecraft"
+          },
+          {
+            "big": "~20%",
+            "label": "more than the International Space Station",
+            "alt": true
+          }
+        ]
+      },
+      "caption": "Elon Musk's pinned post on October 1 said each Star Mind spacecraft will have over 250kW of solar power, about 20% more than the International Space Station.",
+      "evidence": [
+        "Each @SpaceX Star Mind super intelligence spacecraft will have over 250kW of solar power, which is about 20% more than the International Space Station"
+      ]
+    },
+    {
+      "type": "timeline",
+      "label": "What's next",
+      "heading": "From concept video to orbit",
+      "data": {
+        "events": [
+          {
+            "date": "SPACE SAFETY PAGE",
+            "label": "Up to 1 million Starmind satellites, in writing",
+            "status": "done"
+          },
+          {
+            "date": "IAC \u00b7 ANTALYA",
+            "label": "First visual of the constellation",
+            "status": "done"
+          },
+          {
+            "date": "NEXT YEAR",
+            "label": "First Starmind satellites launch",
+            "status": "next"
+          },
+          {
+            "date": "END OF LIFE",
+            "label": "Heliocentric \"graveyard\" orbits, not reentry",
+            "status": "tbd"
+          }
+        ]
+      },
+      "caption": "Nicolls said the first Starmind satellites launch next year. Retired satellites would go to heliocentric graveyard orbits rather than reentering the atmosphere.",
+      "evidence": [
+        "He said the first Starmind satellites launch next year",
+        "Retired satellites would go to heliocentric \"graveyard\" orbits rather than reentering the atmosphere."
+      ]
+    },
+    {
+      "type": "kinetic",
+      "label": "The pushback",
+      "heading": "Not everyone is cheering",
+      "data": {
+        "lines": [
+          "*Astronomers are objecting.*",
+          "Same day, Starlink said other operators' undisclosed maneuvers are *\"the biggest risk in LEO.\"*"
+        ],
+        "size": 58
+      },
+      "caption": "Astronomers are objecting. The same day, Starlink said other operators' undisclosed maneuvers are the biggest risk in LEO.",
+      "evidence": [
+        "Astronomers are objecting.",
+        "other operators' undisclosed maneuvers are \"the biggest risk in LEO.\""
+      ]
+    }
+  ],
+  "sources": [
+    {
+      "label": "PCMag: Bigger than Starlink, SpaceX's orbital data center plans",
+      "url": "https://uk.pcmag.com/networking/167706/bigger-than-starlink-spacex-provides-new-look-at-orbital-data-center-plans"
+    },
+    {
+      "label": "Teslarati: Starmind on SpaceX's Space Safety page",
+      "url": "https://www.teslarati.com/spacex-starmind-space-safety/"
+    },
+    {
+      "label": "Elon Musk on X: Star Mind 250kW (pinned, Oct 1)",
+      "url": "https://x.com/elonmusk/status/2105718806769512812"
+    },
+    {
+      "label": "TeslaNorth: Starlink on undisclosed maneuvers",
+      "url": "https://teslanorth.com/2026/10/06/starlink-undisclosed-maneuvers-leo-risk/"
+    }
+  ],
+  "music": "pad",
+  "length_scale": 0.93,
+  "end_seconds": 6.5
+}
